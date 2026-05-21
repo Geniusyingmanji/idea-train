@@ -21,7 +21,7 @@ OUT_DIR = Path("/home/azureuser/workspace-gzy/zyf/idea_train/data/agentic_v13")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 PAIRS_OUT = OUT_DIR / "preferences.jsonl"
 
-CORPUS = Path("/home/azureuser/workspace-gzy/zyf/idea_train/data/agentic_combined_v3to12/sft_demos.jsonl")
+CORPUS = Path("/home/azureuser/workspace-gzy/zyf/idea_train/data/agentic_combined_v3to16/sft_demos.jsonl")
 
 
 CORRUPTIONS = {
