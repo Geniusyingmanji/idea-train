@@ -8,7 +8,7 @@ import json, hashlib, collections, sys
 from pathlib import Path
 
 ROOT = Path("/home/azureuser/workspace-gzy/zyf/idea_train/data")
-OUT_DIR = ROOT / "agentic_combined_v3to16"
+OUT_DIR = ROOT / "agentic_combined_v3to18"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_FILE = OUT_DIR / "sft_demos.jsonl"
 
@@ -24,6 +24,7 @@ INPUTS = [
     ROOT / "agentic_v14" / "sft_demos.jsonl",
     ROOT / "agentic_v15" / "sft_demos.jsonl",
     ROOT / "agentic_v16" / "sft_demos.jsonl",
+    ROOT / "agentic_v18" / "sft_demos.jsonl",
 ]
 
 
