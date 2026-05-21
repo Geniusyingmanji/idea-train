@@ -1,0 +1,34 @@
+{
+  "trace_id": "earth_science_EarthquakePrediction",
+  "task_id": "earth_science_EarthquakePrediction",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in AI-Driven Seismology / Earthquake Detection and Forecasting.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nMeter-scale laboratory earthquake prediction shows that ML can exploit precursory fault signals, but extrapolation to natural faults remains unresolved because sensors are sparse, fault states are hidden, and false alarms are costly. What physics-informed seismic foundation model would convert lab precursors, earthquake catalogs, geodesy, and simulations into calibrated probabilistic forecasting for natural faults without overclaiming deterministic prediction?\n\n[Paper 1] SeisCLIP: A seismology foundation model pre-trained by multi-modal data for multi-purpose seismic feature extraction\nBrief Abstract: Introduced SeisCLIP, a CLIP-inspired seismology foundation model that uses contrastive learning across seismic spectrogram and event metadata modalities, enabling multi-purpose feature extraction that transfers effectively to diverse downstream tasks including event classification, localization, and focal mechanism analysis.\n\n[Paper 2] PhaseNet: A Deep-Neural-Network-Based Seismic Arrival-Time Picking Method\nBrief Abstract: Introduced a U-Net-based deep neural network for seismic P- and S-wave arrival-time picking that achieves much higher accuracy and recall than traditional methods, trained on over 700,000 analyst-labelled waveforms from Northern California.\n\n[Paper 3] Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking\nBrief Abstract: Proposed EQTransformer, a multi-task deep learning model with hierarchical attention that simultaneously performs earthquake detection and P/S phase picking on single-station data, detecting twice as many earthquakes as conventional approaches using fewer stations.\n\n[Paper 4] SeisLM: a Foundation Model for Seismic Waveforms\nBrief Abstract: Introduced SeisLM, a BERT-style foundation model for seismic waveforms pretrained with self-supervised contrastive learning on large open-source seismic datasets, achieving state-of-the-art performance when fine-tuned on event detection, phase picking, onset regression, and foreshock-aftershock classification.\n\n[Paper 5] Machine Learning Predicts Laboratory Earthquakes\nBrief Abstract: Demonstrated that machine learning can predict the time remaining before laboratory fault failure by listening to acoustic emissions, revealing a previously unrecognized continuous signal from fault zone grain motions that enables forecasting throughout the seismic cycle.\n\n[Paper 6] Machine learning predicts meter-scale laboratory earthquakes\nBrief Abstract: Demonstrated that machine learning trained on foreshock catalogs can accurately predict meter-scale laboratory earthquakes, bridging the critical scale gap between centimeter-scale lab experiments and natural faults and revealing that fault creep stress evolution is the key predictive signal.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 737,
+  "latency_ms": 320480.86738586426,
+  "timestamp": "2026-05-20T22:08:36Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4448006106",
+      "oa:W4448006106"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

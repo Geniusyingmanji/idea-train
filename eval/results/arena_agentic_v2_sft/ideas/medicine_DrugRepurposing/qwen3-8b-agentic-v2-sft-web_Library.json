@@ -1,0 +1,36 @@
+{
+  "trace_id": "medicine_DrugRepurposing",
+  "task_id": "medicine_DrugRepurposing",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Computational Medicine / AI-Driven Drug Repurposing.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nSTEDR demonstrates precision drug repurposing for Alzheimer's disease, but its learned subgroups require post-hoc clinical interpretation and it does not integrate molecular mechanism knowledge. What framework would enable end-to-end integration of knowledge graph-based molecular reasoning, real-world clinical trial emulation, and patient subgroup discovery — producing drug repurposing candidates with both molecular mechanistic explanations and clinically validated subgroup-specific efficacy estimates, ready for prospective clinical trial design?\n\n[Paper 1] A deep learning framework for drug repurposing via emulating clinical trials on real-world patient data\nBrief Abstract: DeepIPW: first deep learning framework to emulate randomized clinical trials on real-world patient data for drug repurposing; uses inverse probability weighting with deep patient representations to identify drugs that improve outcomes for coronary artery disease from millions of patient claims records.\n\n[Paper 2] deepDR: a network-based deep learning approach to in silico drug repositioning\nBrief Abstract: deepDR: first deep learning framework for drug repositioning that integrates 10 drug-related networks via multi-modal deep autoencoders and collective variational autoencoders, achieving 0.908 AUROC for drug-disease association prediction.\n\n[Paper 3] Repurpose Open Data to Discover Therapeutics for COVID-19 Using Deep Learning\nBrief Abstract: CoV-KGE: integrative knowledge graph embedding framework for COVID-19 drug repurposing that builds a 15-million-edge biomedical knowledge graph from 24 million PubMed publications and identifies 41 repurposable drug candidates validated by transcriptomics and clinical trials.\n\n[Paper 4] A foundation model for clinician-centered drug repurposing\nBrief Abstract: TxGNN: graph foundation model for zero-shot drug repurposing across 17,080 diseases; improves indication prediction by 49.2% and contraindication prediction by 35.1% over prior methods; introduces TxGNN Explorer for clinician-facing interpretability.\n\n[Paper 5] Network-based approach to prediction and population-based validation of in silico drug repurposing\nBrief Abstract: First systematic network medicine approach to drug repurposing: quantifies proximity between drug targets and disease genes in the human protein interactome to identify repurposable drug candidates, validated on population-scale claims data for 900+ FDA-approved drugs.\n\n[Paper 6] A Deep Subgrouping Framework for Precision Drug Repurposing via Emulating Clinical Trials on Real-world Patient Data\nBrief Abstract: STEDR: first framework integrating patient subgroup discovery with treatment effect estimation for precision drug repurposing; identifies 14 Alzheimer's disease drug candidates with subgroup-specific benefits from 8 million patient records, bridging population-level AI predictions with precision medicine.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1350,
+  "latency_ms": 345413.6986732483,
+  "timestamp": "2026-05-21T02:20:33Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 4,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008023980",
+      "oa:W4281272410",
+      "oa:W4281272410",
+      "oa:W3008023980"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

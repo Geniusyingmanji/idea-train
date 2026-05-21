@@ -1,0 +1,34 @@
+{
+  "trace_id": "cs_RLAlignment",
+  "task_id": "cs_RLAlignment",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Diversity-Verified Adaptive Rollout Allocation (DVARA): during RLVR training, generate candidate rollouts and score each mid-generation sequence with a learned verifier and a trust-region cost. Allocate more compute to sequences whose predicted verifier diversity gain plus trust-region update magnitude exceeds a budget threshold, while clipping low-signal rollouts only when the combined signal is below a problem-dependent confidence band.\",\n  \"niche_genome\": \"Large-scale LLM reinforcement learning for reasoning, instruction-following, and RLHF-style preference optimization where generation quality depends on exploration diversity, verifier reliability, and bounded training compute.\",\n  \"observation_genome\": \"DVARA should improve accuracy over ARRoL-style fixed-pruning RLVR while preserving or improving training speed, because hard problems receive more sampling and diversity, whereas easy rollouts are pruned only when both signal and diversity are low.\",\n  \"limitation_genome\": \"The proposal depends on a reliable verifier, a good trust-region cost, and an accurate budget allocation policy; it may overfit to the verifier if the diversity proxy is noisy or if the budget allocation is not calibrated to the actual problem difficulty.\",\n  \"delta_genome\": \"Compared with ARRoL’s fixed online rollout pruning, DVARL changes pruning from a heuristic signal threshold into an adaptive decision combining predicted verifier diversity, trust-region cost, and hierarchical sampling budget. Compared with DAPO, it adds a problem-aware allocation layer rather than only decoupling clip and sampling.\",\n  \"claim_genome\": \"A rollout allocator that jointly optimizes diversity-aware verifier gain and trust-region cost will reduce wasted computation on easy, redundant rollouts while preserving unbiased learning signals and improving final model performance on hard reasoning and instruction-following tasks.\"\n}\n```",
+  "prompt": "You are a senior researcher in Reinforcement Learning / LLM Alignment.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nARRoL prunes low-signal rollouts but uses a fixed pruning heuristic. What mechanism would enable adaptive, problem-aware rollout allocation — dynamically investing more compute on hard problems where exploration diversity is critical while preserving unbiased learning signals, verifier reliability, and bounded training cost?\n\n[Paper 1] Direct Preference Optimization: Your Language Model is Secretly a Reward Model\nBrief Abstract: DPO: eliminates the reward model and PPO RL loop by directly optimizing the LLM on preference data via a reparameterized loss.\n\n[Paper 2] Learning to summarize from human feedback\nBrief Abstract: First demonstration that RLHF (PPO + human preference reward model) substantially improves LLM output quality on summarization.\n\n[Paper 3] Training language models to follow instructions with human feedback\nBrief Abstract: InstructGPT: scales RLHF to instruction following with 1.3B-175B parameter GPT-3 models; defines the RLHF recipe for chat LLMs.\n\n[Paper 4] DAPO: An Open-Source LLM Reinforcement Learning System at Scale\nBrief Abstract: DAPO: Decoupled Clip and Dynamic sAmPling policy Optimization — four algorithmic improvements over GRPO that stabilize RL training for LLM reasoning at scale.\n\n[Paper 5] Proximal Policy Optimization Algorithms\nBrief Abstract: PPO: clip-based policy gradient that maintains stable updates within a trust region without second-order optimization.\n\n[Paper 6] Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR\nBrief Abstract: ARRoL: online rollout pruning during RLVR training eliminates low-signal rollouts mid-generation; achieves +2.3-2.99% accuracy gains and 1.7× training speedup over DAPO/GRPO.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1343,
+  "latency_ms": 343335.65640449524,
+  "timestamp": "2026-05-20T21:13:57Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4415478371",
+      "oa:W4415478383"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

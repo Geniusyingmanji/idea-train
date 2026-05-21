@@ -1,0 +1,33 @@
+{
+  "trace_id": "cs_TestTimeCompute",
+  "task_id": "cs_TestTimeCompute",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Design a calibrated online controller for adaptive inference-time reasoning that jointly allocates compute budget among thinking, branching, verification, and tool calls using a reinforcement objective over instance-level reliability, answer quality, and distributional robustness. The controller would learn a state-dependent policy from a diverse training set with distributional shifts, calibrated rewards, and instance-level feedback, then deploy it with an offline-to-online safety layer for out-of-distribution instances.\",\n  \"niche_genome\": \"Large language model test-time reasoning systems where inference compute can improve accuracy but is costly and unreliable under distributional shift, especially for tasks requiring multi-step planning, commonsense reasoning, and tool use.\",\n  \"observation_genome\": \"The controller should improve answer accuracy and calibration on shifted distributions relative to fixed branching, fixed depth, and heuristic stopping rules, while reducing wasted compute on easy or noisy instances.\",\n  \"limitation_genome\": \"The proposal depends on access to calibrated rewards or feedback labels, and its deployment safety layer may still fail for rare out-of-distribution cases not seen during training.\",\n  \"delta_genome\": \"Compared with prior adaptive branching and depth-scaling work, this idea moves from heuristic or externally guided allocation to a learned controller that explicitly balances budget across thinking, branching, verification, and tool calls under distribution shift.\",\n  \"claim_genome\": \"A calibrated online controller can improve reasoning reliability and compute efficiency under distribution shift by dynamically allocating budget across inference-time operations rather than using fixed heuristics or external rewards.\"\n}\n```",
+  "prompt": "You are a senior researcher in Inference Scaling / Test-Time Reasoning.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nAdaptive branching and depth-scaling studies show that inference-time compute can improve reasoning, but current systems still depend on fixed heuristics, external reward models, and brittle stopping rules. What controller would allocate budget across thinking, branching, verification, and tool calls per instance while maintaining calibrated reliability under distribution shift?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 959,
+  "latency_ms": 240310.92858314514,
+  "timestamp": "2026-05-20T22:03:15Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008387018"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

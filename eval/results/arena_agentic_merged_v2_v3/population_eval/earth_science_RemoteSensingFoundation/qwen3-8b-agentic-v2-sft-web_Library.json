@@ -1,0 +1,131 @@
+{
+  "trace_id": "earth_science_RemoteSensingFoundation",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "setting": "Library",
+  "parsed_genome": {},
+  "rationale": {},
+  "layer1": {
+    "json_valid": 0.0,
+    "genome_completeness": 0.0,
+    "parent_agreement": 0.0,
+    "novelty_distance": 0.5,
+    "nearest_papers": [],
+    "limitation_similarity": 0.0
+  },
+  "layer2": {
+    "dynamics_consistency": {
+      "consistent": false,
+      "claimed": null,
+      "reason": "no dynamics claimed"
+    }
+  },
+  "layer3": {
+    "population_subscores": {
+      "parent_grounding": 3.0,
+      "gene_inheritance": 3.0,
+      "limitation_repair": 3.0,
+      "evolutionary_plausibility": 3.0,
+      "balanced_novelty": 3.0,
+      "graph_insertion": 3.0
+    },
+    "scientific_quality_subscores": {
+      "problem_importance": 3.0,
+      "mechanism_concreteness": 3.0,
+      "originality": 3.0,
+      "feasibility": 3.0,
+      "validation_rigor": 3.0,
+      "expected_impact": 3.0
+    },
+    "population_categories": {
+      "parent_plausible": null,
+      "parent_plausible_agreement": 0.0,
+      "limitation_repair_verdict": null,
+      "limitation_repair_verdict_agreement": 0.0,
+      "dynamics_label": null,
+      "dynamics_label_agreement": 0.0,
+      "novelty_verdict": null,
+      "novelty_verdict_agreement": 0.0,
+      "graph_verdict": null,
+      "graph_verdict_agreement": 0.0
+    },
+    "judge_reasons": [],
+    "n_judges": 3,
+    "n_valid_judges": 0,
+    "judge_error_count": 3
+  },
+  "computational_context": "JSON valid: 0.0\nGenome completeness: 0.0\nParent agreement with trace titles: 0.0\nClaimed dynamics: not specified\nDynamics valid: False\nLimitation similarity to latest parent: 0.0\nNearest genome similarity: 0.0\nLatest parent limitation: The model remains focused on image-level and pixel-level tasks; integration with physics-based Earth system models, real-time processing for rapid response, and language-guided open-vocabulary interpretation are open frontiers.\nParsed parent/source ideas: not specified\nParsed mechanism: not specified\nNearest existing genomes:\n- none",
+  "judge_details": [
+    {
+      "error": "Error code: 429 - {'error': {'message': 'Too Many Requests', 'type': 'too_many_requests', 'param': None, 'code': 'too_many_requests'}}",
+      "judge_model": "gpt-5.5"
+    },
+    {
+      "error": "Error code: 404 - {'error': {'type': 'invalid_request_error', 'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "judge_model": "gpt-5.4"
+    },
+    {
+      "error": "Error code: 404 - {'error': {'type': 'invalid_request_error', 'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "judge_model": "gpt-5.4-nano"
+    }
+  ],
+  "scores": {
+    "score_version": "gene_arena_score_v3",
+    "population_score": 50.0,
+    "scientific_quality_score": 50.0,
+    "gene_arena_score": 50.0,
+    "raw_population_score": 50.0,
+    "raw_scientific_quality_score": 50.0,
+    "population_subscores": {
+      "parent_grounding": 3.0,
+      "gene_inheritance": 3.0,
+      "limitation_repair": 3.0,
+      "evolutionary_plausibility": 3.0,
+      "balanced_novelty": 3.0,
+      "graph_insertion": 3.0
+    },
+    "scientific_quality_subscores": {
+      "problem_importance": 3.0,
+      "mechanism_concreteness": 3.0,
+      "originality": 3.0,
+      "feasibility": 3.0,
+      "validation_rigor": 3.0,
+      "expected_impact": 3.0
+    },
+    "population_categories": {
+      "parent_plausible": null,
+      "parent_plausible_agreement": 0.0,
+      "limitation_repair_verdict": null,
+      "limitation_repair_verdict_agreement": 0.0,
+      "dynamics_label": null,
+      "dynamics_label_agreement": 0.0,
+      "novelty_verdict": null,
+      "novelty_verdict_agreement": 0.0,
+      "graph_verdict": null,
+      "graph_verdict_agreement": 0.0
+    },
+    "caps_applied": [],
+    "weights": {
+      "population": {
+        "parent_grounding": 0.2,
+        "gene_inheritance": 0.15,
+        "limitation_repair": 0.2,
+        "evolutionary_plausibility": 0.15,
+        "balanced_novelty": 0.15,
+        "graph_insertion": 0.15
+      },
+      "scientific_quality": {
+        "problem_importance": 0.15,
+        "mechanism_concreteness": 0.2,
+        "originality": 0.15,
+        "feasibility": 0.15,
+        "validation_rigor": 0.2,
+        "expected_impact": 0.15
+      },
+      "gene_arena": {
+        "population_score": 0.6,
+        "scientific_quality_score": 0.4
+      }
+    }
+  },
+  "timestamp": "2026-05-21 05:21:40"
+}

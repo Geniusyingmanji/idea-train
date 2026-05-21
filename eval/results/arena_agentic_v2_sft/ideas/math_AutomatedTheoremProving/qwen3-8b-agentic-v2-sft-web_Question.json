@@ -1,0 +1,34 @@
+{
+  "trace_id": "math_AutomatedTheoremProving",
+  "task_id": "math_AutomatedTheoremProving",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a hybrid research system called `LeanExplorator` that combines informal mathematical exploration, Lean-grounded proof search, and conjecture generation. The core mechanism is an interactive loop where users write informal definitions, state open conjectures, and run proof-search agents over Lean-style formalizations. The loop should generate proofs, counterexamples, failed lemmas, and reformulated conjectures, while an exploration agent selects which definitions, lemmas, and conjectures to highlight for the user.\",\n  \"niche_genome\": \"Open-ended mathematical research where the target is not fully formulated, including problems in algebra, topology, combinatorics, number theory, and geometry. The system should support both isolated open questions and collaborative exploration of research programs.\",\n  \"observation_genome\": \"LeanExplorator should improve the transition from informal exploration to formal proof by reducing the cognitive load of lemma selection and conjecture formulation. Empirically, it should increase the number of useful lemmas generated per informal exploration session and reduce the time users spend stuck on unproductive definitions or conjectures.\",\n  \"limitation_genome\": \"The proposal assumes a user with some familiarity with Lean and formal mathematics, and it does not solve the fundamental difficulty of discovering new mathematical objects or structures. Its novelty lies in the integration of informal exploration, proof search, and conjecture generation rather than in Lean itself.\",\n  \"delta_genome\": \"Compared with existing Aristotle-style provers that solve well-posed Lean problems, LeanExplorator adds informal exploration and conjecture generation as first-class components. It changes the workflow from proving a given target to jointly discovering definitions, conjectures, and proofs.\",\n  \"claim_genome\": \"A hybrid system that interleaves informal exploration, Lean-grounded proof search, and conjecture generation will enable researchers to explore open-ended mathematical questions more effectively than Lean-only proof assistants or informal exploration alone.\"\n}\n```",
+  "prompt": "You are a senior researcher in Formal Mathematics / Automated Theorem Proving.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nAristotle-style IMO provers show strong formal proof search on well-posed Lean problems, but research mathematics requires formulating conjectures, choosing definitions, and deciding which lemmas matter before a formal target exists. What system would connect informal exploration, Lean-grounded proof search, and conjecture generation for open-ended mathematical research?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1179,
+  "latency_ms": 271676.451921463,
+  "timestamp": "2026-05-21T01:58:06Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4407338093",
+      "oa:W4407338093"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

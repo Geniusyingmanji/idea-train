@@ -1,0 +1,33 @@
+{
+  "trace_id": "chemistry_Retrosynthesis",
+  "task_id": "chemistry_Retrosynthesis",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Train a stereo-aware retrosynthesis transformer that represents each reaction as a multi-modal event graph, where nodes encode reactants/products, stereochemical configurations, reaction conditions, and stereochemical transition rules, and edges encode retrosynthetic bonds, stereochemical outcomes, and reaction conditions. The model jointly optimizes single-step reactivity prediction, stereochemical prediction, condition prediction, and multi-step route planning using a shared latent space and differentiable reward for stereochemical fidelity.\",\n  \"niche_genome\": \"Stereocontrolled retrosynthesis prediction for drug-like molecules, especially reactions where stereochemistry, reaction conditions, and multiple steps jointly determine synthetic feasibility and product outcome.\",\n  \"observation_genome\": \"The model should improve top-1 accuracy on RSGPT benchmark reactions and reduce failure rates on stereocontrolled transformations and multi-step routes, while maintaining reasonable inference speed relative to pretraining-only retrosynthesis models.\",\n  \"limitation_genome\": \"The proposal depends on high-quality stereochemical reaction datasets, stereochemical transition rules, and condition labels; it may also suffer from overfitting to frequent stereochemistry patterns and difficulty handling truly rare, stereochemically ambiguous, or asymmetric-catalyzed transformations.\",\n  \"delta_genome\": \"Compared with RSGPT and similar retrosynthesis models, this idea adds stereochemical and condition-aware retrosynthesis as a unified planning component rather than treating stereochemistry and conditions as post-hoc corrections or separate modules.\",\n  \"claim_genome\": \"A stereo-aware retrosynthesis transformer that jointly reasons over reactivity, stereochemical outcomes, reaction conditions, and multi-step synthetic routes can outperform pretraining-only retrosynthesis models on stereocontrolled and multi-step retrosynthesis benchmarks while preserving general reactivity knowledge.\"\n}\n```",
+  "prompt": "You are a senior researcher in Computational Chemistry / Retrosynthesis Prediction.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nRSGPT achieves 63.4% top-1 accuracy through massive pretraining but still fails on over a third of reactions, particularly stereoselective transformations and multi-step routes. What mechanism would enable retrosynthesis models to jointly reason about single-step reactivity, stereochemical outcomes, reaction conditions, and multi-step synthetic planning in a unified end-to-end framework?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1302,
+  "latency_ms": 244494.10891532898,
+  "timestamp": "2026-05-20T18:43:49Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008342371"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

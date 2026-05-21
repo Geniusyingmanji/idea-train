@@ -1,0 +1,416 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "lora": "idea_train/train/checkpoints/qwen3-8b-sft-v6/final",
+  "k_pct": 20.0,
+  "n_eval": 50,
+  "n_ref": 50,
+  "eval_mean_min_k_pp": 4.181785521507263,
+  "ref_mean_min_k_pp": 5.052501935958862,
+  "delta (eval - ref)": -0.8707164144515991,
+  "leak_clean (delta < 0.05)": true,
+  "per_paper_eval": [
+    {
+      "paper_id": "C-01_genome_fingerprint_0001",
+      "min_k_pp": 4.848283767700195
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0002",
+      "min_k_pp": 4.248706340789795
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0003",
+      "min_k_pp": 4.418972969055176
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0004",
+      "min_k_pp": 4.276010036468506
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0005",
+      "min_k_pp": 4.61035680770874
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0006",
+      "min_k_pp": 3.944920539855957
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0007",
+      "min_k_pp": 4.356155872344971
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0008",
+      "min_k_pp": 4.700431823730469
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0009",
+      "min_k_pp": 4.55582332611084
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0010",
+      "min_k_pp": 4.158198356628418
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0018",
+      "min_k_pp": 4.013579368591309
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0019",
+      "min_k_pp": 4.554432392120361
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0020",
+      "min_k_pp": 4.0648088455200195
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0021",
+      "min_k_pp": 3.975816488265991
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0022",
+      "min_k_pp": 3.9983246326446533
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0023",
+      "min_k_pp": 4.147026062011719
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0024",
+      "min_k_pp": 4.05289363861084
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0025",
+      "min_k_pp": 3.714397430419922
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0026",
+      "min_k_pp": 4.284145832061768
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0027",
+      "min_k_pp": 4.229082107543945
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0028",
+      "min_k_pp": 3.7809414863586426
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0029",
+      "min_k_pp": 3.9427249431610107
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0030",
+      "min_k_pp": 4.665396690368652
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0031",
+      "min_k_pp": 3.7304842472076416
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0032",
+      "min_k_pp": 3.9911305904388428
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0033",
+      "min_k_pp": 3.9397032260894775
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0034",
+      "min_k_pp": 4.261589050292969
+    },
+    {
+      "paper_id": "C-01_genome_fingerprint_0035",
+      "min_k_pp": 3.851207971572876
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0001",
+      "min_k_pp": 4.394052505493164
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0002",
+      "min_k_pp": 4.6089067459106445
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0003",
+      "min_k_pp": 3.990687847137451
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0004",
+      "min_k_pp": 4.170436382293701
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0005",
+      "min_k_pp": 4.2850165367126465
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0006",
+      "min_k_pp": 4.058660507202148
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0007",
+      "min_k_pp": 4.247402191162109
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0018",
+      "min_k_pp": 4.3187360763549805
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0019",
+      "min_k_pp": 4.261223316192627
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0020",
+      "min_k_pp": 4.274453163146973
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0021",
+      "min_k_pp": 4.267937660217285
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0022",
+      "min_k_pp": 3.818263292312622
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0023",
+      "min_k_pp": 4.117263317108154
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0024",
+      "min_k_pp": 4.089088439941406
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0025",
+      "min_k_pp": 4.2001423835754395
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0026",
+      "min_k_pp": 4.385166645050049
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0027",
+      "min_k_pp": 3.7093162536621094
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0028",
+      "min_k_pp": 4.085077285766602
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0029",
+      "min_k_pp": 4.254344463348389
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0030",
+      "min_k_pp": 4.187427997589111
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0031",
+      "min_k_pp": 3.812335252761841
+    },
+    {
+      "paper_id": "C-02_fingerprint_resolve_0032",
+      "min_k_pp": 4.23779296875
+    }
+  ],
+  "per_paper_ref": [
+    {
+      "paper_id": "paper:program_induction_by_rationale_generation_learning_to_solve:2017",
+      "min_k_pp": 5.258614540100098
+    },
+    {
+      "paper_id": "paper:discretization_of_the_3d_monge_ampere_operator_between_wide:2015",
+      "min_k_pp": 4.80038595199585
+    },
+    {
+      "paper_id": "paper:blender_enabling_local_search_with_a_hybrid_differential_pri:2017",
+      "min_k_pp": 4.659111499786377
+    },
+    {
+      "paper_id": "paper:principal_geodesic_analysis_for_probability_measures_under_t:2015",
+      "min_k_pp": 4.85009241104126
+    },
+    {
+      "paper_id": "paper:better_mini_batch_algorithms_via_accelerated_gradient_method:2011",
+      "min_k_pp": 4.774836540222168
+    },
+    {
+      "paper_id": "paper:approximating_likelihood_ratios_with_calibrated_discriminati:2015",
+      "min_k_pp": 5.286834716796875
+    },
+    {
+      "paper_id": "paper:cudnn_efficient_primitives_for_deep_learning:2014",
+      "min_k_pp": 5.458255290985107
+    },
+    {
+      "paper_id": "paper:figureqa_an_annotated_figure_dataset_for_visual_reasoning:2017",
+      "min_k_pp": 4.9486308097839355
+    },
+    {
+      "paper_id": "paper:tall_temporal_activity_localization_via_language_query:2017",
+      "min_k_pp": 4.801208019256592
+    },
+    {
+      "paper_id": "paper:deep_learning_for_classification_of_colorectal_polyps_on_who:2017",
+      "min_k_pp": 5.637125492095947
+    },
+    {
+      "paper_id": "paper:carla_an_open_urban_driving_simulator:2017",
+      "min_k_pp": 5.305408477783203
+    },
+    {
+      "paper_id": "paper:neural_network_based_graph_embedding_for_cross_platform_bina:2017",
+      "min_k_pp": 5.291373252868652
+    },
+    {
+      "paper_id": "paper:coco_stuff_thing_and_stuff_classes_in_context:2016",
+      "min_k_pp": 5.105916976928711
+    },
+    {
+      "paper_id": "paper:unsupervised_representation_learning_of_structured_radio_com:2016",
+      "min_k_pp": 4.001217365264893
+    },
+    {
+      "paper_id": "paper:predicting_surgery_targets_in_temporal_lobe_epilepsy_through:2015",
+      "min_k_pp": 5.3488311767578125
+    },
+    {
+      "paper_id": "paper:metastability_in_a_stochastic_neural_network_modeled_as_a_ve:2013",
+      "min_k_pp": 5.409355640411377
+    },
+    {
+      "paper_id": "paper:synchronization_of_delayed_coupled_neurons_in_presence_of_in:2012",
+      "min_k_pp": 4.994370937347412
+    },
+    {
+      "paper_id": "paper:numerical_bifurcation_theory_for_high_dimensional_neural_mod:2014",
+      "min_k_pp": 5.583249568939209
+    },
+    {
+      "paper_id": "paper:detection_algorithms_for_communication_systems_using_deep_le:2017",
+      "min_k_pp": 5.637553691864014
+    },
+    {
+      "paper_id": "paper:towards_an_understanding_of_the_correlations_in_jet_substruc:2015",
+      "min_k_pp": 5.125646114349365
+    },
+    {
+      "paper_id": "paper:from_the_schr_odinger_problem_to_the_monge_kantorovich_probl:2010",
+      "min_k_pp": 5.1344170570373535
+    },
+    {
+      "paper_id": "paper:kepler_presearch_data_conditioning_i_architecture_and_algori:2012",
+      "min_k_pp": 4.981897354125977
+    },
+    {
+      "paper_id": "paper:benchmarking_deep_reinforcement_learning_for_continuous_cont:2016",
+      "min_k_pp": 4.943393230438232
+    },
+    {
+      "paper_id": "paper:causal_inference_and_causal_explanation_with_background_know:1995",
+      "min_k_pp": 4.930397033691406
+    },
+    {
+      "paper_id": "paper:the_mass_of_kepler_93b_and_the_composition_of_terrestrial_pl:2014",
+      "min_k_pp": 5.8402252197265625
+    },
+    {
+      "paper_id": "paper:unbalanced_optimal_transport_geometry_and_kantorovich_formul:2015",
+      "min_k_pp": 5.051281452178955
+    },
+    {
+      "paper_id": "paper:lsdsem_2017_shared_task_the_story_cloze_test:2017",
+      "min_k_pp": 4.290620803833008
+    },
+    {
+      "paper_id": "paper:training_deep_nets_with_sublinear_memory_cost:2016",
+      "min_k_pp": 5.088375568389893
+    },
+    {
+      "paper_id": "paper:pycosmo_an_integrated_cosmological_boltzmann_solver:2017",
+      "min_k_pp": 5.124477386474609
+    },
+    {
+      "paper_id": "paper:the_einstein_toolkit_a_community_computational_infrastructur:2011",
+      "min_k_pp": 5.520687103271484
+    },
+    {
+      "paper_id": "paper:user_friendly_guarantees_for_the_langevin_monte_carlo_with_i:2017",
+      "min_k_pp": 5.446669578552246
+    },
+    {
+      "paper_id": "paper:practical_quantum_error_mitigation_for_near_future_applicati:2017",
+      "min_k_pp": 4.867092132568359
+    },
+    {
+      "paper_id": "s2:94168692edb14b8b15f16ec0d793d22d3137be48",
+      "min_k_pp": 4.732786178588867
+    },
+    {
+      "paper_id": "paper:learning_probability_measures_with_respect_to_optimal_transp:2012",
+      "min_k_pp": 4.932300567626953
+    },
+    {
+      "paper_id": "paper:a_survey_on_multi_task_learning:2017",
+      "min_k_pp": 5.603092670440674
+    },
+    {
+      "paper_id": "paper:quantitative_concentration_inequalities_for_empirical_measur:2005",
+      "min_k_pp": 4.330496788024902
+    },
+    {
+      "paper_id": "paper:bottom_up_and_top_down_attention_for_image_captioning_and_vi:2017",
+      "min_k_pp": 5.261826038360596
+    },
+    {
+      "paper_id": "paper:the_power_of_normalization_faster_evasion_of_saddle_points:2016",
+      "min_k_pp": 4.9918742179870605
+    },
+    {
+      "paper_id": "paper:learning_entity_and_relation_embeddings_for_knowledge_graph:2015",
+      "min_k_pp": 5.275424003601074
+    },
+    {
+      "paper_id": "paper:quantum_dynamics_of_thermalizing_systems:2017",
+      "min_k_pp": 4.6197710037231445
+    },
+    {
+      "paper_id": "paper:proposed_search_for_the_detection_of_gravitational_waves_fro:2015",
+      "min_k_pp": 5.167060375213623
+    },
+    {
+      "paper_id": "paper:quantum_algorithm_for_systems_of_linear_equations_with_expon:2015",
+      "min_k_pp": 5.924129009246826
+    },
+    {
+      "paper_id": "paper:purification_of_noisy_entanglement_and_faithful_teleportatio:1995",
+      "min_k_pp": 5.130014419555664
+    },
+    {
+      "paper_id": "paper:dynamic_graph_convolutional_networks:2017",
+      "min_k_pp": 5.15285062789917
+    },
+    {
+      "paper_id": "paper:good_debt_or_bad_debt_detecting_semantic_orientations_in_eco:2013",
+      "min_k_pp": 4.465275764465332
+    },
+    {
+      "paper_id": "paper:deep_convolutional_networks_on_graph_structured_data:2015",
+      "min_k_pp": 4.840704441070557
+    },
+    {
+      "paper_id": "paper:continuation_of_localized_coherent_structures_in_nonlocal_ne:2013",
+      "min_k_pp": 4.599396228790283
+    },
+    {
+      "paper_id": "paper:generative_temporal_models_with_memory:2017",
+      "min_k_pp": 4.84935998916626
+    },
+    {
+      "paper_id": "paper:the_arcade_learning_environment_an_evaluation_platform_for_g:2012",
+      "min_k_pp": 5.101765155792236
+    },
+    {
+      "paper_id": "paper:frasian_inference:2012",
+      "min_k_pp": 4.149416923522949
+    }
+  ],
+  "ref_caveat": "ref set currently uses GeneTrace source_text (upper bound). Replace with recent post-cutoff arXiv abstracts for a tight baseline."
+}

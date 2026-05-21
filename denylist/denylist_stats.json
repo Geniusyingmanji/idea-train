@@ -1,0 +1,41 @@
+{
+  "total_unique_papers": 8359,
+  "id_coverage": {
+    "with_s2_id": 7557,
+    "with_arxiv_id": 317,
+    "with_title": 8358,
+    "s2_id_cross_resolved_via_paper_db": 1512
+  },
+  "appearances_per_source": {
+    "trace_graph": 7357,
+    "gene_card": 2076,
+    "arena_task": 335,
+    "trace_gene_graph": 1
+  },
+  "papers_per_domain": {
+    "science": 4735,
+    "cs": 3137,
+    "astronomy": 51,
+    "physics": 47,
+    "biology": 46,
+    "energy": 46,
+    "chemistry": 44,
+    "economics": 35,
+    "mathematics": 30,
+    "statistics": 30,
+    "agriculture": 24,
+    "medicine": 23,
+    "neuroscience": 22,
+    "ecology": 20,
+    "materials": 16,
+    "climate": 14,
+    "earth_science": 14,
+    "math": 14,
+    "life_science": 10,
+    "information_science": 1
+  },
+  "output_files": [
+    "/home/azureuser/workspace-gzy/zyf/idea_train/denylist/denylist_v0.jsonl",
+    "/home/azureuser/workspace-gzy/zyf/idea_train/denylist/denylist_v0.csv"
+  ]
+}

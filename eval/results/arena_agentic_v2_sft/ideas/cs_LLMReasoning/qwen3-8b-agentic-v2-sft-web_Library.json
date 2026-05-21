@@ -1,0 +1,34 @@
+{
+  "trace_id": "cs_LLMReasoning",
+  "task_id": "cs_LLMReasoning",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Natural Language Processing / Reasoning.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nMole-Syn identifies structural patterns in successful Long CoT but cannot predict which reasoning structure a given problem requires. What mechanism would enable adaptive reasoning architecture selection — dynamically choosing, verifying, and stopping Deep-Reasoning, Self-Reflection, and Self-Exploration modes based on problem structure while maintaining calibrated reliability on unfamiliar tasks?\n\n[Paper 1] Let's Verify Step by Step\nBrief Abstract: Process Reward Models (PRMs) trained with step-level human feedback outperform outcome-level ORMs for mathematical reasoning verification.\n\n[Paper 2] Self-Consistency Improves Chain of Thought Reasoning in Language Models\nBrief Abstract: Sample diverse reasoning paths with CoT and take the majority vote answer, replacing greedy decoding.\n\n[Paper 3] Tree of Thoughts: Deliberate Problem Solving with Large Language Models\nBrief Abstract: Organize LLM reasoning as a tree where each node is a partial thought; use BFS/DFS with self-evaluation for deliberate problem solving.\n\n[Paper 4] DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning\nBrief Abstract: Pure RL (GRPO) on reasoning tasks without supervised chain-of-thought distillation produces frontier reasoning capabilities; open-weights model matching o1.\n\n[Paper 5] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models\nBrief Abstract: Intermediate reasoning steps (chain-of-thought) in prompts dramatically improve LLM performance on complex reasoning tasks.\n\n[Paper 6] The Molecular Structure of Thought: Mapping the Topology of Long Chain-of-Thought Reasoning\nBrief Abstract: Identifies stable structural patterns (Deep-Reasoning, Self-Reflection, Self-Exploration) in Long CoT; introduces Mole-Syn for synthesizing structured Long CoT training data; provides mechanistic analysis of why RLVR reasoning succeeds.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 661,
+  "latency_ms": 332387.2513771057,
+  "timestamp": "2026-05-20T20:31:35Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W3008338200",
+      "oa:W3008338200"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

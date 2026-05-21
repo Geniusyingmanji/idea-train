@@ -1,0 +1,124 @@
+\section{\genetrace}
+\label{sec:genetrace}
+
+\genetrace{} is a four-level annotation corpus over a contamination-guarded
+paper pool. Section~\ref{sec:genetrace:schema} defines the schema,
+Section~\ref{sec:genetrace:construction} describes the construction
+pipeline, and Section~\ref{sec:genetrace:contamination} details the
+contamination guard that distinguishes our release from prior paper-graph
+corpora.
+
+\subsection{Schema}
+\label{sec:genetrace:schema}
+
+\paragraph{Level 1 --- GenomeCard.} For each paper $p$, a JSON record
+containing the six gene fields from \ideaevolving{} (mechanism, niche,
+observation, limitation, delta, claim), each accompanied by zero or more
+\emph{evidence quotes} from the source text. Evidence quotes are
+character-offset-anchored and verified by exact substring match against
+\texttt{title + abstract + intro}. The full schema is given in
+Appendix~\ref{app:schema:card}.
+
+\paragraph{Level 2 --- DynamicsEdge.} For each ordered pair $(p, q)$ in a
+lineage chain, a record giving the dynamics label
+$d \in \{\text{Mutation}, \text{Adaptive Radiation},
+\text{Hybridization}, \text{Speciation}, \text{Niche Competition}\}$, the
+\emph{driver} field (which of $p$'s six fields motivated the transition),
+and per-field \emph{gene fates}
+$\in \{\text{INHERITED}, \text{MUTATED}, \text{LOST}, \text{NOVEL},
+\text{HYBRIDIZED}\}$. Edges include a teacher chain-of-thought trace
+explaining the dynamics assignment.
+
+\paragraph{Level 3 --- LineageChain.} For each chain of length $\geq 3$, a
+record giving the member papers, the per-step dynamics sequence, and a
+teacher narrative summary. Chains are constructed by DFS over the
+DynamicsEdge graph with cycle detection.
+
+\paragraph{Level 4 --- VerifierBundle.} Per-annotation automated scores
+(schema validity, evidence groundedness, dynamics consistency,
+fate--dynamics agreement) bundled in a separate file for downstream
+consumers who want to filter by quality or use the scores as RL rewards.
+
+\subsection{Construction pipeline}
+\label{sec:genetrace:construction}
+
+\paragraph{Paper pool.} We start from $\sim$3,846 pre-2017 papers extracted
+from the \ideaevolving{} \texttt{paper\_db}, filtered to those with
+abstracts of $\geq$200 words (yielding $\sim$857 in the round-1 SFT pool;
+expanded to 5K for the v0.1 release). Pre-2017 papers and the
+\ideaevolving{} denylist (Section~\ref{sec:genetrace:contamination}) jointly
+guarantee disjointness from \geneexam{} evaluation papers.
+
+\paragraph{Teacher annotation.} For each paper, we prompt GPT-5.5 (Azure
+keyless endpoint, frozen snapshot \texttt{2024-12-01-preview}) with the
+source text and a structured \emph{gene\_card\_extract} prompt. The teacher
+returns a JSON object with the six gene fields, each accompanied by 1--3
+verbatim evidence quotes from the source. We accept the annotation iff a
+deterministic verifier (Appendix~\ref{app:verifier}) returns
+\texttt{schema\_valid} = 1.0 and \texttt{evidence\_grounded} $\geq 0.8$.
+For round-1, 100\% of teacher outputs passed the schema check; 856 of 857
+passed the evidence check.
+
+\paragraph{Lineage edges.} For each pair $(p, q)$ where $q$ cites $p$ and
+both are in the safe pool, we prompt the teacher with both cards and the
+candidate dynamics enum. Dynamics validity (label $\in$ enum) and
+fate--dynamics consistency (e.g., \textit{Hybridization} requires $\geq 1$
+\texttt{HYBRIDIZED} fate) are enforced by the verifier.
+
+\paragraph{Quality filtering.} We discard annotations failing any verifier
+check. For the v0.2 release, we additionally apply \emph{consistency
+filtering} \citep{west2023symbolic}: each lineage edge is annotated twice
+(once by GPT-5.5, once by Qwen3-14B-Thinking), and only edges where both
+teachers agree on the dynamics label are retained.
+
+\subsection{Contamination guard}
+\label{sec:genetrace:contamination}
+
+A paper-graph corpus intended for training models that will be evaluated on
+benchmarks derived from the same literature must explicitly demonstrate
+non-overlap with the evaluation set. We adopt three layers:
+
+\begin{enumerate}
+  \item \textbf{Denylist.} An explicit blocklist of 8,359 paper IDs
+    extracted from \ideaevolving's \texttt{paper\_db}; 90.4\% have a resolvable
+    Semantic Scholar ID. We additionally include a 1-hop OpenAlex
+    citation expansion (in progress; v0.2 release).
+  \item \textbf{Temporal cut.} The training pool is restricted to
+    pre-2017 papers. \geneexam{} draws predominantly from 2018+ literature,
+    providing a temporal disjointness guarantee independent of the
+    denylist.
+  \item \textbf{Min-K\%++ leakage diagnostic.} We measure
+    \citep{shi2024minkpp}-style memorisation probability that the trained
+    model has seen each \geneexam{} paper. We report this number in the
+    dataset card; target Min-20\%++ $<$ 0.05 (consistent with no leakage).
+\end{enumerate}
+
+The denylist, safe-pool construction code, and Min-K\%++ measurement
+script ship with the release, enabling any downstream consumer to verify
+the contamination guard end-to-end.
+
+\subsection{Dataset statistics}
+\label{sec:genetrace:stats}
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Release & Cards & Edges & Chains & Status \\
+    \midrule
+    v0.1 (paper) & \todo{5K} & \todo{2K} & \todo{200} & in progress \\
+    v0.2 (1mo)   & 20K & 8K & 1K & planned \\
+    v1.0         & 50K+ & 25K+ & 5K+ & long-term \\
+    \bottomrule
+  \end{tabular}
+  \caption{\genetrace{} release tiers. v0.1 ships with the paper.}
+  \label{tab:release_tiers}
+\end{table}
+
+Table~\ref{tab:release_tiers} summarises the tiered release. The v0.1
+corpus shipped with this paper contains \todo{5K} GenomeCards
+($\sim$\todo{4.3K} with full evidence quotes), \todo{2K} DynamicsEdges
+spanning all five modes, and \todo{200} LineageChains of length 3--5.
+All annotations include teacher reasoning traces (mean length
+\todo{N} tokens, capped at 1024).

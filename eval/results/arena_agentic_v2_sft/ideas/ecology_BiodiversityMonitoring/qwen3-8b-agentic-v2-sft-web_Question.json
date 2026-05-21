@@ -1,0 +1,33 @@
+{
+  "trace_id": "ecology_BiodiversityMonitoring",
+  "task_id": "ecology_BiodiversityMonitoring",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Build ECOCLIP, a multimodal ecological foundation model that jointly trains image, acoustic, eDNA, satellite, phenology, and sampling-bias encoders over a unified taxonomic hierarchy, with a shared latent space that maps organism-level observations to population-level population-dynamic and habitat-change predictions.\",\n  \"niche_genome\": \"Real-time biodiversity monitoring for protected areas, conservation reserves, and wildlife corridors where camera traps, acoustic sensors, eDNA sampling, satellite imagery, phenological events, and sampling-bias metadata are available.\",\n  \"observation_genome\": \"ECOCLIP should improve organism-level recognition accuracy and reduce false positives/negatives compared with BioCLIP 2 alone, while also predicting population trends and habitat degradation across monitored sites.\",\n  \"limitation_genome\": \"The idea depends on access to paired multimodal ecological datasets, taxonomic metadata, and labeled population/trend targets, which are sparse and noisy. It also risks overfitting to available data and failing to represent uncertainty across modalities and sampling conditions.\",\n  \"delta_genome\": \"Compared with BioCLIP 2, ECOCLIP adds acoustic, eDNA, satellite, phenology, and sampling-bias modalities, trains a shared ecological latent space, and explicitly outputs population-level trend and habitat-change predictions with uncertainty estimates.\",\n  \"claim_genome\": \"A unified multimodal ecological foundation model can connect organism-level recognition to population-level conservation decisions in real time, outperforming single-modal or supervised recognition pipelines on biodiversity monitoring benchmarks and improving actionable monitoring under sampling-bias conditions.\"\n}\n```",
+  "prompt": "You are a senior researcher in Ecology / AI-Powered Species Identification and Biodiversity Monitoring.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nBioCLIP 2 scales biological visual representations with taxonomic structure, but biodiversity monitoring still misses acoustic, eDNA, satellite, phenology, and sampling-bias context. What multimodal ecological foundation model would connect organism-level recognition to population trends and habitat change for real-time, uncertainty-aware conservation decisions?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1031,
+  "latency_ms": 268694.45848464966,
+  "timestamp": "2026-05-20T23:02:34Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008392090"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

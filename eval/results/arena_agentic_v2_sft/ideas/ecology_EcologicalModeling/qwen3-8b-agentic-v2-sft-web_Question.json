@@ -1,0 +1,33 @@
+{
+  "trace_id": "ecology_EcologicalModeling",
+  "task_id": "ecology_EcologicalModeling",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a hybrid SDM framework called DIRT-Net (Deep Integrated Reassembly Transformer Network) that combines CNN-based remote-sensing habitat prediction with mechanistic dispersal kernels, population demography, species interaction networks, and calibrated predictive uncertainty. The model would use Sentinel-2/3, MODIS, climate projections, land-use change maps, and species interaction networks as inputs, then forecast not only species presence but also community turnover, species abundance, and spatially resolved uncertainty intervals across multiple future scenarios.\",\n  \"niche_genome\": \"Species distribution and community reassembly forecasting in terrestrial ecosystems under climate warming, land-use conversion, and biotic interaction changes. Target datasets include tropical, temperate, and boreal forests, grasslands, and savannas with long-term presence/absence records, remote sensing composites, climate variables, land-use maps, and interaction networks.\",\n  \"observation_genome\": \"DIRT-Net is expected to outperform static CNNs and presence-only SDMs in future scenario tests: it should produce more accurate community reassembly predictions, narrower calibrated uncertainty intervals, and better preservation of dispersal-limited and interaction-dependent species under novel climate and land-use conditions.\",\n  \"limitation_genome\": \"The proposal depends on high-quality species interaction networks, long-term demographic data, and computationally intensive mechanistic integration. It may overfit if interaction networks are sparse or noisy, and uncertainty calibration is difficult when mechanistic components are imperfect.\",\n  \"delta_genome\": \"Compared with the 2026 CNN result, this proposal moves from static habitat prediction to a mechanistic forecasting framework that explicitly models dispersal, demography, species interactions, and uncertainty. It reuses deep learning’s capacity for high-dimensional remote sensing and climate inputs while adding ecological process components that CNNs alone cannot infer.\",\n  \"claim_genome\": \"A hybrid SDM that integrates deep remote sensing with mechanistic dispersal, demography, and interaction networks can forecast community reassembly more accurately and robustly than static deep learning or presence-only SDMs under climate and land-use novelty.\"\n}\n```",
+  "prompt": "You are a senior researcher in Ecology / Deep Learning for Species Distribution and Ecosystem Dynamics Modeling.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nThe 2026 CNN result shows deep learning can outperform classic presence-only species distribution models, but static correlations still fail under climate and land-use novelty, dispersal limits, and biotic interactions. What hybrid ecological model would combine remote sensing, mechanistic dispersal and demography, species interactions, and uncertainty calibration to forecast community reassembly rather than just current distributions?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1444,
+  "latency_ms": 247691.39790534973,
+  "timestamp": "2026-05-20T23:35:00Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008309438"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "trace_id": "ecology_ConservationRemoteSensing",
+  "task_id": "ecology_ConservationRemoteSensing",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a calibrated near-real-time geospatial foundation model framework that maps Sentinel-2, Landsat, and SAR pixels to sub-hectare alerts and jointly infers disturbance type, severity, and conservation impact using a hybrid transformer-physical model architecture trained on paired EO observations, field surveys, and MRV-compatible biodiversity/carbon datasets.\",\n  \"niche_genome\": \"Global tropical and subtropical forest monitoring for conservation MRV, including near-real-time alerts for logging, fire, drought, road construction, and agriculture conversion in regions lacking continuous satellite coverage or field capacity.\",\n  \"observation_genome\": \"The framework should produce sub-hectare alerts 24–72 hours after cloud-free EO acquisition, with calibrated posterior probabilities for disturbance type and impact on species richness, carbon stock, and conservation priority, improving over pixel-level classification and static MRV reporting.\",\n  \"limitation_genome\": \"Requires access to high-quality MRV-compatible field surveys, biodiversity metrics, and carbon flux data for calibration; may degrade in areas with sparse ground truth or rapidly changing land cover.\",\n  \"delta_genome\": \"Moves beyond broad EO transfer by adding a calibrated attribution layer that maps EO representations to measurable conservation impacts, rather than only detecting change or predicting broad land-cover labels.\",\n  \"claim_genome\": \"A foundation-model change-detection system augmented with calibrated disturbance attribution can produce globally scalable sub-hectare conservation alerts that improve MRV reporting and support adaptive conservation decision-making.\"\n}\n```",
+  "prompt": "You are a senior researcher in Ecology / Deep Learning for Forest Monitoring, Deforestation Detection, and Conservation Remote Sensing.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nPrithvi-EO-2.0 and SkySense-style geospatial foundation models support broad Earth-observation transfer, but conservation deployment needs sub-hectare, near-real-time alerts that distinguish logging, fire, drought, roads, and agriculture while attaching biodiversity and carbon impact. What change-detection and attribution framework would turn foundation-model representations into globally calibrated conservation MRV?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1409,
+  "latency_ms": 249274.7232913971,
+  "timestamp": "2026-05-20T23:18:45Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008339134"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 2,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "trace_id": "agriculture_CropYieldPrediction",
+  "task_id": "agriculture_CropYieldPrediction",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Precision Agriculture / Remote Sensing.\nBelow are 9 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nScalable Vision-Guided estimation achieves statistically valid yield estimates with limited ground truth, but requires per-region calibration and cannot transfer control functions across seasons. How can geospatial foundation models pre-trained on diverse global agricultural data enable zero-shot yield estimation that generalizes across crops, regions, and seasons without region-specific ground truth?\n\n[Paper 1] Coupling machine learning and crop modeling improves crop yield prediction in the US Corn Belt\nBrief Abstract: Demonstrated that coupling APSIM crop simulation model outputs as features for ML models reduces corn yield prediction RMSE by 7-20%, establishing the hybrid simulation-ML paradigm for yield prediction.\n\n[Paper 2] CMAViT: Integrating Climate, Management, and Remote Sensing Data for Crop Yield Estimation with Multimodel Vision Transformers\nBrief Abstract: Introduced a multimodal Vision Transformer that integrates climate, management practices (via text-based cross-attention), and satellite imagery for pixel-level vineyard yield prediction, achieving R-squared of 0.84 across 2,200 hectares.\n\n[Paper 3] FARM: Fine-Tuning Geospatial Foundation Models for Intra-Field Crop Yield Regression\nBrief Abstract: Demonstrated that fine-tuning the Prithvi-EO-2.0-600M geospatial foundation model for continuous yield regression produces dense 30m pixel-level yield maps, achieving RMSE of 0.44 and R-squared of 0.81 on Canadian Prairie canola.\n\n[Paper 4] A GNN-RNN Approach for Harnessing Geospatial and Temporal Information: Application to Crop Yield Prediction\nBrief Abstract: Introduced graph neural networks to crop yield prediction, modeling spatial dependencies between counties as a graph to capture geographic knowledge transfer.\n\n[Paper 5] Scalable Vision-Guided Crop Yield Estimation\nBrief Abstract: Introduced prediction-powered inference (PPI) combining computer vision on field photos with sparse crop-cut ground truth to achieve scalable, statistically rigorous yield estimation in sub-Saharan Africa.\n\n[Paper 6] A CNN-RNN Framework for Crop Yield Prediction\nBrief Abstract: Proposed a CNN-RNN architecture that jointly processes environmental data and management practices for multi-state corn and soybean yield prediction across the U.S. Corn Belt.\n\n[Paper 7] MMST-ViT: Climate Change-aware Crop Yield Prediction via Multi-Modal Spatial-Temporal Vision Transformer\nBrief Abstract: Proposed a three-component Vision Transformer architecture (Multi-Modal, Spatial, Temporal transformers) that integrates satellite imagery with meteorological data and models long-term climate change effects on crop yields.\n\n[Paper 8] Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data\nBrief Abstract: Introduced deep learning (CNN/LSTM with Gaussian Process) for county-level soybean yield prediction from MODIS satellite data, winning Best Student Paper in Computational Sustainability.\n\n[Paper 9] Deep Transfer Learning for Crop Yield Prediction with Remote Sensing Data\nBrief Abstract: Demonstrated transfer learning for crop yield prediction across countries, training deep learning models on satellite data from Argentina and transferring to Brazil, winning Best Presentation at COMPASS 2018.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 870,
+  "latency_ms": 486003.9920806885,
+  "timestamp": "2026-05-21T01:52:14Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 9,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

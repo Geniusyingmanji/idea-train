@@ -1,0 +1,31 @@
+{
+  "trace_id": "astro_Cosmology",
+  "task_id": "astro_Cosmology",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Astrophysics / Computational Cosmology.\nBelow are 7 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nThe weak-lensing simulation-based-inference benchmark shows that field-level posterior estimation can be standardized, but its simplified log-normal simulator omits the systematics that dominate real Rubin, Euclid, and Roman analyses. What inference framework would remain calibrated under baryonic feedback, intrinsic alignments, masking, selection effects, and photometric-redshift uncertainty while preserving the non-Gaussian information needed for unbiased dark-energy and structure-growth constraints?\n\n[Paper 1] Modeling baryonic physics in future weak lensing surveys\nBrief Abstract: Using hydrodynamical simulations, this paper quantified how baryonic physics biases weak-lensing two-point statistics and therefore cosmological parameter constraints. It helped motivate the need for simulation-aware inference pipelines that explicitly model baryonic uncertainty rather than ignoring it.\n\n[Paper 2] The CAMELS project: Cosmology and Astrophysics with MachinE Learning Simulations\nBrief Abstract: CAMELS introduced a large suite of thousands of cosmological hydrodynamical and N-body simulations spanning cosmological and astrophysical feedback parameters, explicitly designed for machine learning and inference. It transformed the field from single high-fidelity simulations toward structured simulation ensembles suitable for emulation and likelihood-free inference.\n\n[Paper 3] DeepLSS: Breaking Parameter Degeneracies in Large-Scale Structure with Deep-Learning Analysis of Combined Probes\nBrief Abstract: DeepLSS developed a deep-learning framework for extracting cosmological information directly from large-scale-structure image data, moving beyond handcrafted summary statistics. It showed that neural networks can recover cosmological parameters from field-level maps more efficiently than traditional low-order summaries in simulation settings.\n\n[Paper 4] sbi: A toolkit for simulation-based inference\nBrief Abstract: This paper presented sbi, a general-purpose software toolkit implementing modern neural simulation-based inference methods such as neural posterior estimation, neural likelihood estimation, and neural ratio estimation. It provided the practical machinery needed to turn expensive cosmological simulators and simulation suites into posterior estimators without explicit likelihoods.\n\n[Paper 5] Simulation-based inference benchmark for weak lensing cosmology\nBrief Abstract: This paper benchmarks full-field simulation-based inference for weak-lensing cosmology using the sbi_lens differentiable log-normal forward model for LSST Y10-like convergence maps. It compares explicit full-field inference with implicit neural-likelihood approaches and quantifies the simulation cost needed to recover calibrated cosmological posteriors.\n\n[Paper 6] The IllustrisTNG simulations: public data release\nBrief Abstract: This paper released the public data products of the IllustrisTNG cosmological magnetohydrodynamical simulations, providing a widely used high-fidelity forward model of galaxy formation and large-scale structure. It established a community benchmark for studying how baryonic physics affects cosmological observables relevant to parameter estimation.\n\n[Paper 7] Accurate field-level weak lensing inference for precision cosmology\nBrief Abstract: This paper advanced weak-lensing parameter estimation by combining field-level map information with simulation-based inference and differentiable statistics. It pushed the lineage from simulation suites and neural summaries toward calibrated posterior inference directly from weak-lensing mass maps.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 4191,
+  "latency_ms": 458670.7355976105,
+  "timestamp": "2026-05-21T02:38:42Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 1,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 8,
+    "temperature": 0.5
+  }
+}

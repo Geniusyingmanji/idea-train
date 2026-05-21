@@ -1,0 +1,31 @@
+\genetrace{} v0.1 is restricted to CS papers and to a single teacher
+model (GPT-5.5). Cross-domain coverage (v0.2 biology and physics) and
+multi-teacher consensus filtering are planned but not in scope for this
+release. The six-field genome schema is inherited from our prior work
+\ideaevolving{} and was not re-derived from first principles for this
+paper; an ablation dropping individual fields (mechanism alone, niche
+alone, etc.) would test whether all six are load-bearing. The five-mode
+dynamics taxonomy is similarly inherited; alternative taxonomies (e.g.,
+finer-grained transition types) are not explored.
+
+\evoopd{} requires a teacher model with accessible per-token
+log-probabilities. Open-weights teachers (Qwen3-14B-Thinking,
+Llama-3-70B) satisfy this; closed APIs that return only top-$K$
+log-probs (GPT-5.5 Black-Box, arXiv 2511.10643) work but with a known
+truncation hit. The lineage-consistency signal requires the corpus to
+provide multi-paper chains; tasks without natural lineage structure
+(single-instance QA, open-domain reasoning) cannot benefit from
+component (C) of the algorithm.
+
+The contamination guard relies on the published \ideaevolving{}
+\texttt{paper\_db} being a complete enumeration of \geneexam{} source
+papers. If \geneexam{} draws from papers outside this list, our
+denylist may be incomplete; the temporal cut (pre-2017) provides a
+fallback guarantee. We measure Min-K\%++ on the test set as an
+independent leakage check.
+
+Reproducibility: all training runs are at LoRA scale and complete in
+hours; replicating the full pipeline (SFT + \evoopd{}) requires 4$\times$
+A100 80GB for $\sim$3 days. We provide the LoRA adapter weights, the
+\genetrace{} v0.1 corpus, and the construction code under permissive
+licenses to enable independent replication.

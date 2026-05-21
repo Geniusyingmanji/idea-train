@@ -1,0 +1,682 @@
+{
+  "n_tested": 210,
+  "parse_ok": 210,
+  "schema_valid": 210,
+  "v_eq_1": 210,
+  "v_ge_0p5": 210,
+  "per_task": {
+    "T1-01_contribution_type": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T1-02_genome_field_type": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T1-03_driver_vs_passenger": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T1-04_lineage_position": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T1-05_cross_lineage_bridge": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-01_ordering_5": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-02_ordering_6": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-03_ordering_7": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-04_grouping_8": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-05_grouping_8_medium": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-06_grouping_9_triple": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-07_lim_delta_match": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-08_lim_delta_mixed": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-09_lim_delta_chain": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-10_genome_field_assign_2p": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-11_genome_field_assign_3p_9a": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T2-12_gene_alignment": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-01_single_dynamics": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-02_genome_field_change": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-03_driver_dynamics": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-04_genome_field_change_shown": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-05_driver_summary": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-06_dynamics_mech": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-07_blind_change": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-08_driver_unlabeled": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-09_relation_classify": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-10_genome_direction": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-11_evo_tempo": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-12_evo_pattern": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-13_hidden_gene_fate": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-14_hybrid_provenance": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-15_gene_tracking": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-16_dynamics_boundary": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T3-17_multi_citation": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-01_consistency_check": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-02_intruder_domain": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-03_wrong_step": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-04_next_hop": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-05_parent_genome": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-06_missing_link": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-07_gene_bridge": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    },
+    "T4-08_citation_consistency": {
+      "n_tested": 5,
+      "n_schema_registered": 5,
+      "n_parse_ok": 5,
+      "n_schema_valid": 5,
+      "n_v_eq_1": 5,
+      "n_v_ge_0p5": 5,
+      "v_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sample_failure": null
+    }
+  },
+  "unregistered_schemas": []
+}

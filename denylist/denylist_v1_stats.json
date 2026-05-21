@@ -1,0 +1,18 @@
+{
+  "v1_total": 1130,
+  "v0_seeds": 50,
+  "openalex_resolved": 42,
+  "openalex_resolution_methods": {
+    "via_title_year": 36,
+    "via_title_only": 6,
+    "failed": 8
+  },
+  "neighbors_added": 1080,
+  "neighbors_hydrated": 870,
+  "denylist_tiers": {
+    "seed": 50,
+    "1hop_referenced": 1080
+  },
+  "elapsed_seconds_total": 180.2,
+  "workers": 10
+}

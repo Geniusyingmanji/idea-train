@@ -1,0 +1,28 @@
+{
+  "trace_id": "agriculture_CropDiseaseDetection",
+  "task_id": "agriculture_CropDiseaseDetection",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v1",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"A plant-pathology digital-twin foundation model, called LeafDyna, that jointly encodes multi-temporal leaf images, environmental sensor streams, and treatment outcome feedback using a vision-language foundation model with a state-aware transformer that maps disease progression, weather, soil conditions, pesticide application, and recovery to natural-language diagnostic and advisory outputs.\",\n  \"niche_genome\": \"Precision agriculture for crops with latent or early-stage foliar diseases, especially in smallholder or resource-constrained settings where repeated field visits are costly and treatment decisions need to be made under changing environmental conditions.\",\n  \"observation_genome\": \"LeafDyna should outperform static-image SCOLD baselines and single-sensor treatment recommenders by improving disease identification under multi-temporal progression, by reducing false alarms when weather or irrigation changes, and by adapting treatment advice after pesticide application and crop response feedback.\",\n  \"limitation_addressed\": \"SCOLD-style zero-shot disease identification is limited because it assumes a single static image and ignores temporal progression, environmental covariates, and treatment feedback. LeafDyna repairs this by making disease identification and advisory decisions over time rather than at a single snapshot.\",\n  \"delta_genome\": \"The delta is to move from a static image classifier to a digital-twin-style diagnostic loop that uses temporal leaf images, environmental sensors, and treatment outcome feedback as inputs to a vision-language foundation model that generates natural-language disease labels and treatment recommendations.\",\n  \"claim_genome\": \"A vision-language foundation model trained on multi-temporal leaf images, environmental sensor data, and treatment outcomes can improve interactive plant disease diagnosis and advisory decisions compared with SCOLD-style single-image zero-shot identification and rule-based treatment recommenders.\"\n}\n```",
+  "prompt": "You are a senior researcher in Computer Vision / Plant Pathology.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nSCOLD enables zero-shot disease identification but operates on single static leaf images without temporal, environmental, or treatment context. How can vision-language foundation models be extended to incorporate multi-temporal progression data, environmental sensors, and treatment outcome feedback for interactive disease management advisory systems?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 964,
+  "latency_ms": 249938.98630142212,
+  "timestamp": "2026-05-20T15:54:55Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

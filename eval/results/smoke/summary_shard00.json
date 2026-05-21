@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3-8B-Base",
+  "profile": "main_challenge",
+  "shard": 0,
+  "num_shards": 1,
+  "n_instances": 10,
+  "n_correct": 0,
+  "macro_accuracy": 0.0,
+  "per_task_accuracy": {
+    "T1-01_contribution_type": 0.0
+  },
+  "elapsed_seconds": 44.28180480003357,
+  "per_tier_macro": {
+    "T1": 0.0
+  }
+}

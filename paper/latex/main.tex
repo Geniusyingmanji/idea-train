@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage[review]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\IfFileExists{inconsolata.sty}{\usepackage{inconsolata}}{}    % optional
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Macros
+\newcommand{\tool}[1]{\texttt{#1}}
+\newcommand{\genetrace}{\textsc{GeneTrace}}
+\newcommand{\evoopd}{\textsc{evo-OPD}}
+\newcommand{\geneexam}{\textsc{GENE-bench}}
+\newcommand{\ideaevolving}{\textsc{IdeaEvolving}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\note}[1]{\textcolor{blue}{[note: #1]}}
+
+\title{\genetrace{} and \evoopd{}: A Training-Grade Genome-Centric Corpus and Lineage-Aware Distillation for Scientific Idea Models}
+
+\author{Anonymous Authors \\
+  Affiliation \\
+  \texttt{email@domain} \\}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present \genetrace, the first training-grade corpus instantiating the
+\emph{genome-centric} paper-representation paradigm, and \evoopd, a
+lineage-aware on-policy distillation algorithm designed to exploit it.
+Building on our prior work that defined the paradigm at proof-of-concept
+scale (\ideaevolving / \geneexam), \genetrace{} scales the six-field
+genome decomposition and five-mode evolutionary-dynamics taxonomy from a
+1{,}029-item evaluation set to a 5K--50K corpus annotated with evidence
+quotes, automated verifier scores, and teacher reasoning traces. \evoopd{}
+extends vanilla on-policy distillation with two new signals --- a
+verifier-anchored reward decoupled by per-token role, and a self-supervised
+lineage-consistency signal --- both of which generalise to open-ended
+generation. On \geneexam{} main challenge, fine-tuning Qwen3-8B with
+\genetrace-derived data and \evoopd{} reaches \todo{X}\% accuracy, a
+\todo{Y}-point improvement over an SFT-only baseline at matched compute.
+We release the corpus, training code, contamination guard, and trained
+model weights under permissive licenses.
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/genetrace}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/discussion}
+
+\section*{Limitations}
+\input{sections/limitations}
+
+\section*{Ethics Statement}
+\input{sections/ethics}
+
+\section*{Acknowledgments}
+\todo{Acknowledgments after de-anonymisation.}
+
+\bibliography{custom}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

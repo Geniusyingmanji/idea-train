@@ -1,0 +1,33 @@
+{
+  "trace_id": "earth_science_RemoteSensingFoundation",
+  "task_id": "earth_science_RemoteSensingFoundation",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"GeosenseNet: a multimodal satellite-image foundation model that jointly encodes optical, SAR, hyperspectral, LiDAR, and temporal satellite data, while explicitly grounding each observation in Earth-system physics such as atmospheric scattering, soil moisture, vegetation dynamics, and surface energy budgets. The model learns causal change representations from multitemporal sequences and emits uncertainty-aware open-vocabulary labels, explanations, and actionable monitoring decisions through a natural-language interface.\",\n  \"niche_genome\": \"Trustworthy open-vocabulary disaster and environmental monitoring in complex Earth-system settings, including flood mapping, wildfire progression, deforestation, glacier retreat, coastal erosion, and agricultural drought, where false alarms, ambiguous labels, and physical plausibility are critical.\",\n  \"observation_genome\": \"On benchmark disaster and environmental monitoring datasets, GeosenseNet should outperform SkySense++-style multimodal encoders by improving open-vocabulary accuracy, reducing false alarms, and producing uncertainty-aware change explanations that align with physical Earth-system constraints. A natural-language interface should enable users to ask for causal reasoning, such as “Why did the lake area increase in this region?” or “What is the likely cause of this vegetation stress?”\",\n  \"limitation_genome\": \"The idea depends on access to labeled physical constraints, causal change labels, and natural-language interface training data, which are sparse and often domain-specific. It may also require significant domain adaptation for different Earth-system phenomena and operational monitoring scenarios.\",\n  \"delta_genome\": \"Compared with SkySense++ and similar multimodal remote-sensing foundation models, GeosenseNet adds explicit geophysical constraints, causal change reasoning, and decision-time uncertainty, rather than treating multimodal representations as purely predictive or descriptive. It also extends foundation models from closed-vocabulary classification to open-vocabulary monitoring with explainable uncertainty and natural-language interfaces.\",\n  \"claim_genome\": \"A satellite-image foundation model that fuses optical, SAR, hyperspectral, LiDAR, and temporal data with Earth-system constraints and natural-language interfaces can improve trustworthy open-vocabulary disaster and environmental monitoring by reducing false alarms, improving physical plausibility, and enabling causal reasoning at decision time.\"\n}\n```",
+  "prompt": "You are a senior researcher in Remote Sensing / Satellite Image Foundation Models.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nSkySense++ unifies multimodal remote-sensing representations and improves few-shot Earth-observation tasks, but it still lacks explicit geophysical constraints, causal change reasoning, and decision-time uncertainty. What foundation model would fuse optical, SAR, hyperspectral, LiDAR, and temporal data with physical Earth-system knowledge and natural-language interfaces for trustworthy open-vocabulary disaster and environmental monitoring?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1521,
+  "latency_ms": 242276.4437198639,
+  "timestamp": "2026-05-20T22:45:51Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4408939098"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

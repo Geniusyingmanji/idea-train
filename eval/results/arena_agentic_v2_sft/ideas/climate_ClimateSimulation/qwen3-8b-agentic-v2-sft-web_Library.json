@@ -1,0 +1,31 @@
+{
+  "trace_id": "climate_ClimateSimulation",
+  "task_id": "climate_ClimateSimulation",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Climate Modeling / Climate Emulators.\nBelow are 7 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nHybrid physics-ML climate parameterizations and learned emulators can improve speed and online skill, but they remain brittle under long rollouts and out-of-distribution forcing scenarios. What mechanism would make ML climate emulators scenario-aware and physically constrained enough to produce uncertainty-calibrated multi-decadal responses to novel greenhouse-gas, aerosol, land-use, and coupled Earth-system feedback changes for assessment-scale use?\n\n[Paper 1] Deep learning to represent subgrid processes in climate models\nBrief Abstract: This paper showed that neural networks can emulate unresolved subgrid physical processes, especially moist convection, inside climate models. It was an early demonstration that machine learning could replace expensive parameterizations while retaining useful climate statistics.\n\n[Paper 2] ClimaX: A foundation model for weather and climate\nBrief Abstract: ClimaX introduced a transformer-based foundation model pretrained across heterogeneous weather and climate datasets, tasks, and variables. It reframed climate and weather modeling as transferable representation learning rather than single-task supervised prediction.\n\n[Paper 3] ACE: A fast, skillful learned global atmospheric model for climate prediction\nBrief Abstract: ACE presented a learned global atmospheric model aimed at climate prediction with emphasis on speed, forecast skill, and stable rollout. It moved beyond generic foundation modeling toward a simulator-oriented learned atmospheric model optimized for fast and skillful climate-timescale emulation.\n\n[Paper 4] WeatherBench: A Benchmark Data Set for Data-Driven Weather Forecasting\nBrief Abstract: This paper introduced a standardized benchmark dataset and evaluation framework for data-driven weather forecasting, enabling systematic comparison of deep learning and physics-based methods. It accelerated the community's transition from component-level ML toward end-to-end atmospheric prediction.\n\n[Paper 5] Crowdsourcing the Frontier: Advancing Hybrid Physics-ML Climate Simulation via a $50,000 Kaggle Competition\nBrief Abstract: This paper advances hybrid physics-ML climate simulation by using a large-scale $50,000 Kaggle competition to crowdsource and benchmark subgrid ML parameterizations designed for stable and skillful online climate modeling.\n\n[Paper 6] The Community Earth System Model: A Framework for Collaborative Research\nBrief Abstract: This paper introduced CESM1, a major coupled general circulation / Earth system model used for climate simulation across components including atmosphere, ocean, land, and sea ice. It established the high-fidelity but computationally expensive simulation paradigm that later emulator work seeks to approximate or accelerate.\n\n[Paper 7] Neural general circulation models for weather and climate\nBrief Abstract: NeuralGCM combined neural components with differentiable dynamical cores to create a learned general circulation model capable of weather and climate simulation. It directly targeted the central frontier issues of long-term stability, physical structure, and climate-statistical fidelity.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 711,
+  "latency_ms": 358189.70680236816,
+  "timestamp": "2026-05-20T19:07:35Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "trace_id": "neuro_Connectomics",
+  "task_id": "neuro_Connectomics",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a multimodal whole-brain circuit validator called ConnectomeCausalGraphs that jointly learns cell-type-resolved connection probability, directed synaptic strength, uncertainty, and causal influence by integrating EM/SEM connectivity, morphological reconstruction, gene expression, physiology, behavior, and targeted perturbation data. The core method would be a Bayesian graph neural network with latent cell-type embeddings, behavior-conditioned dynamics, and perturbation-response validation layers.\",\n  \"niche_genome\": \"Vertebrate whole-brain connectomics, especially mammalian brain regions where high-resolution EM wiring maps are available but functional causality, directionality, cell-type alignment, and uncertainty remain unresolved.\",\n  \"observation_genome\": \"The framework should identify cell-type-specific wiring motifs, behavior-dependent causal pathways, and perturbation-response mismatches between connectivity maps and observed physiology/behavior. It should also produce uncertainty maps for each connection, direction, and causal claim.\",\n  \"limitation_genome\": \"The proposal depends on high-quality EM/SEM connectivity maps, aligned cell-type atlases, physiology recordings, behavior data, and perturbation experiments. It may overfit to available datasets and struggle to infer causality without controlled perturbations.\",\n  \"delta_genome\": \"Compared with prior graph-learning connectome work, this idea adds physiology, behavior, and perturbation as causal validation modalities, rather than treating connectivity maps as only structural priors. It mutates connectome graph learning from a static wiring inference task into a functionally validated causal inference task.\",\n  \"claim_genome\": \"A multimodal Bayesian graph neural network that jointly learns connectivity, cell-type alignment, physiology, behavior, and perturbation responses can validate whole-brain circuit principles and distinguish true causal connections from correlation in large connectome maps.\"\n}\n```",
+  "prompt": "You are a senior researcher in Neuroscience / Computational Neuroscience.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nLarge 2025 connectomics resources now provide unprecedented wiring maps, but connection probabilities, synaptic directionality, uncertainty, cell-type alignment, and functional causality remain unresolved, especially in vertebrate brains. What multimodal graph-learning framework would combine morphology, EM, gene expression, physiology, behavior, and perturbation data to turn static connectome maps into functionally validated whole-brain circuit principles?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 797,
+  "latency_ms": 157659.34014320374,
+  "timestamp": "2026-05-21T03:36:07Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 3,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W3008338438"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

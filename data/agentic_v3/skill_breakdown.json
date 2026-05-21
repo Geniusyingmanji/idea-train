@@ -1,0 +1,173 @@
+{
+  "total_demos": 1032,
+  "archetype_total": {
+    "W10_vague_to_concrete": 151,
+    "W5_critical_analysis": 75,
+    "W1_pure_discovery": 169,
+    "W2_single_paper_extension": 109,
+    "W4_literature_review": 142,
+    "W3_multi_paper_synthesis": 91,
+    "W7_hypothesis_refinement": 90,
+    "W6_cross_domain_bridge": 74,
+    "W9_tool_heavy_comparison": 68,
+    "W8_reproduction_doubt": 63
+  },
+  "discipline_total": {
+    "astronomy": 107,
+    "chemistry": 112,
+    "biology": 102,
+    "materials": 86,
+    "computer_science": 78,
+    "physics": 91,
+    "earth_science": 74,
+    "energy": 93,
+    "mathematics": 79,
+    "neuroscience": 75,
+    "agriculture": 7,
+    "astro": 7,
+    "climate": 5,
+    "cs": 27,
+    "earth": 20,
+    "ecology": 5,
+    "math": 7,
+    "medicine": 7,
+    "neuro": 6,
+    "information": 18,
+    "life": 14,
+    "material": 12
+  },
+  "skill_total": {
+    "lineage_construction": 541,
+    "critical_evaluation": 731,
+    "gap_identification": 1032,
+    "problem_clarification": 715,
+    "multi_source_synthesis": 941,
+    "hypothesis_specification": 581,
+    "method_transfer": 486,
+    "reflection_revision": 322
+  },
+  "arch_skill_matrix": {
+    "W10_vague_to_concrete": {
+      "lineage_construction": 151,
+      "critical_evaluation": 102,
+      "gap_identification": 151,
+      "problem_clarification": 151,
+      "multi_source_synthesis": 149,
+      "hypothesis_specification": 106,
+      "reflection_revision": 14,
+      "method_transfer": 54
+    },
+    "W5_critical_analysis": {
+      "gap_identification": 75,
+      "multi_source_synthesis": 47,
+      "critical_evaluation": 75,
+      "problem_clarification": 50,
+      "method_transfer": 22,
+      "hypothesis_specification": 75,
+      "lineage_construction": 10,
+      "reflection_revision": 13
+    },
+    "W1_pure_discovery": {
+      "lineage_construction": 169,
+      "gap_identification": 169,
+      "multi_source_synthesis": 169,
+      "problem_clarification": 169,
+      "hypothesis_specification": 87,
+      "reflection_revision": 13,
+      "critical_evaluation": 91,
+      "method_transfer": 73
+    },
+    "W2_single_paper_extension": {
+      "lineage_construction": 109,
+      "critical_evaluation": 91,
+      "gap_identification": 109,
+      "multi_source_synthesis": 97,
+      "method_transfer": 42,
+      "reflection_revision": 109,
+      "problem_clarification": 41,
+      "hypothesis_specification": 26
+    },
+    "W4_literature_review": {
+      "critical_evaluation": 97,
+      "gap_identification": 142,
+      "problem_clarification": 142,
+      "multi_source_synthesis": 142,
+      "method_transfer": 67,
+      "reflection_revision": 23,
+      "hypothesis_specification": 44,
+      "lineage_construction": 57
+    },
+    "W3_multi_paper_synthesis": {
+      "critical_evaluation": 67,
+      "gap_identification": 91,
+      "multi_source_synthesis": 91,
+      "method_transfer": 91,
+      "hypothesis_specification": 39,
+      "problem_clarification": 25,
+      "lineage_construction": 10,
+      "reflection_revision": 20
+    },
+    "W7_hypothesis_refinement": {
+      "gap_identification": 90,
+      "multi_source_synthesis": 69,
+      "problem_clarification": 69,
+      "hypothesis_specification": 90,
+      "reflection_revision": 90,
+      "method_transfer": 22,
+      "critical_evaluation": 33,
+      "lineage_construction": 12
+    },
+    "W6_cross_domain_bridge": {
+      "gap_identification": 74,
+      "multi_source_synthesis": 74,
+      "method_transfer": 74,
+      "critical_evaluation": 44,
+      "hypothesis_specification": 31,
+      "reflection_revision": 15,
+      "lineage_construction": 8,
+      "problem_clarification": 9
+    },
+    "W9_tool_heavy_comparison": {
+      "critical_evaluation": 68,
+      "gap_identification": 68,
+      "multi_source_synthesis": 68,
+      "method_transfer": 22,
+      "problem_clarification": 19,
+      "hypothesis_specification": 20,
+      "reflection_revision": 16,
+      "lineage_construction": 11
+    },
+    "W8_reproduction_doubt": {
+      "critical_evaluation": 63,
+      "gap_identification": 63,
+      "method_transfer": 19,
+      "hypothesis_specification": 63,
+      "multi_source_synthesis": 35,
+      "reflection_revision": 9,
+      "problem_clarification": 40,
+      "lineage_construction": 4
+    }
+  },
+  "tool_calls_total": {
+    "search": 2312,
+    "read": 2523,
+    "extract_genome": 835,
+    "genome_diff": 634,
+    "novelty_check": 594,
+    "propose": 1128
+  },
+  "avg_tools_per_demo": 7.7771317829457365,
+  "tool_per_demo_distribution": {
+    "min": 6,
+    "p25": 7,
+    "median": 8.0,
+    "p75": 8,
+    "max": 16
+  },
+  "completion_chars": {
+    "min": 6524,
+    "median": 10360.0,
+    "mean": 10545.908914728681,
+    "max": 47202
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "trace_id": "chemistry_MolecularGeneration",
+  "task_id": "chemistry_MolecularGeneration",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Adaptive Pocket-Aware Reverse Transition Kernel: train a neural reverse transition kernel that maps noisy 3D molecule representations to clean pocket-conditioned ligands without recomputing full forward-process statistics. The kernel is learned from a mixture of valid molecules, invalid molecules, ADMET-labeled molecules, and pocket-interaction-aware denoising trajectories, and is conditioned on target pockets, binding-site coordinates, and optional constraints such as protein residues, hotspots, and physicochemical filters.\",\n  \"niche_genome\": \"Real-time conditional 3D molecular generation for drug discovery: previously unseen targets, pocket-conditioned ligand design, and rapid lead optimization where forward-process statistics are too costly to precompute.\",\n  \"observation_genome\": \"Recent conditional 3D generation models such as PMDM show strong pocket-aware ligand synthesis, but they still rely on learned diffusion dynamics or precomputed forward-process statistics. Diffusion-model surveys emphasize that sampling under control goals is promising, but existing methods do not jointly preserve 3D validity, pocket interaction, ADMET feasibility, and synthesizability in one amortized kernel.\",\n  \"limitation_genome\": \"The main limitation is the Reverse Transition Kernel bottleneck: deterministic denoising accelerates 3D generation, but it depends on precomputed forward-process statistics. This makes the method non-real-time for new targets and difficult to jointly optimize binding-site interaction, ADMET, and synthesizability constraints.\",\n  \"delta_genome\": \"Replace a precomputed forward-process-dependent reverse kernel with an amortized, forward-process-free reverse transition kernel trained on pocket-conditioned trajectories and validity-aware loss. Add a dual-objective objective: reconstruction of target pocket interaction and 3D validity, plus an adversarial or constraint satisfaction component for ADMET and synthesizability.\",\n  \"claim_genome\": \"The proposed mechanism should enable real-time conditional 3D molecular generation for unseen targets while jointly preserving 3D validity, pocket interaction, ADMET feasibility, and synthesizability without recomputing forward-process statistics.\"\n}\n```",
+  "prompt": "You are a senior researcher in Computational Chemistry / Generative Molecular Design.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nDDDM accelerates 3D molecular generation via deterministic denoising but the Reverse Transition Kernel requires pre-computed forward process statistics. What mechanism would enable real-time conditional molecular generation for previously unseen targets while jointly preserving 3D validity, pocket interaction constraints, ADMET feasibility, and synthesizability without forward-process recomputation?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 994,
+  "latency_ms": 311513.6218070984,
+  "timestamp": "2026-05-21T05:34:26Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 3,
+    "read_count": 2,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4393181728",
+      "oa:W4403087461"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

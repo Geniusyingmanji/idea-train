@@ -1,0 +1,74 @@
+\section{Introduction}
+\label{sec:intro}
+
+Recent progress in scientific-idea generation by large language models
+(\todo{cite ResearchAgent, AutoSurvey, Sakana AI Scientist}) has exposed a
+representation gap: current systems reason over papers as either
+\emph{document-centric} blobs (abstracts, full text) or as
+\emph{method-entity-centric} graphs that link technique names across the
+literature (\todo{cite Intern-Atlas}). Neither layer captures \emph{why} one
+paper followed another --- whether it fixed a predecessor's limitation,
+hybridised two lineages, or speciated into a new niche. This is precisely the
+question a model must answer to propose the \emph{next} paper, rather than
+merely retrieve a past one.
+
+Our prior work, \ideaevolving~\citep{ideaevolving2025}, argued that a
+\emph{genome-centric} layer can fill this gap. Each paper is decomposed into
+six fields --- \emph{mechanism}, \emph{niche}, \emph{observation},
+\emph{limitation}, \emph{delta}, \emph{claim} --- and each lineage edge
+between two papers is tagged with one of five \emph{evolutionary dynamics}:
+\textit{Mutation}, \textit{Adaptive Radiation}, \textit{Hybridization},
+\textit{Speciation}, or \textit{Niche Competition}. \ideaevolving{}
+demonstrated this paradigm by hand-curating the 1{,}029-item \geneexam{}
+evaluation set and showing that frontier models struggle on it
+(\todo{cite GPT-5.5 number}).
+
+This paper takes the next step: turning the paradigm from an
+\textbf{evaluation construct} into a \textbf{training substrate}. We
+contribute:
+
+\begin{enumerate}
+  \item \textbf{\genetrace{}}: the first release-grade, training-scale
+    instantiation of the genome paradigm. Compared to \ideaevolving's eval set,
+    \genetrace{} adds per-field evidence quotes, automated verifier scores on
+    every annotation, and teacher reasoning traces, and scales from $\sim$2K
+    hand-curated papers to 5K--50K papers annotated by a strong teacher
+    (GPT-5.5) under explicit contamination guards. We ship the denylist and
+    safe-pool construction code with the release, enabling provable disjoint
+    splits between training and \geneexam{} evaluation.
+  \item \textbf{\evoopd{}}: a lineage-aware on-policy distillation algorithm
+    that uses three signals coupled at the token level: (i) field-gated
+    reverse-KL to a strong teacher, (ii) a verifier-anchored reward decoupled
+    by per-token role, and (iii) a self-supervised lineage-consistency
+    signal derived from \genetrace's lineage chains. The algorithm generalises
+    to open-ended generation by replacing the closed-form verifier with a
+    continuous one, without altering the optimisation procedure.
+  \item \textbf{Empirical demonstration} on Qwen3-8B: \evoopd{} reaches
+    \todo{X}\% on \geneexam{} main challenge, \todo{Y} points above an SFT
+    baseline and \todo{Z} points above a vanilla-OPD baseline at matched
+    compute, with corresponding lifts on the open-ended \texttt{GENE-Arena}
+    benchmark.
+\end{enumerate}
+
+\paragraph{Why a new training algorithm?} Vanilla on-policy distillation
+(Tinker; Qwen3 strong-to-weak; \todo{cite}) treats every token as an
+equally-weighted reverse-KL target against a single teacher's distribution.
+Verifier-based RL (DAPO, Dr.~GRPO; \todo{cite}) assumes one scalar reward
+per trajectory. The genome-centric setting violates both assumptions:
+content tokens (the values of the six genome fields) carry the task
+information, while boilerplate (JSON brackets, field names) carries none;
+and our verifier provides multiple substructure scores rather than a single
+exact-match flag. \evoopd{} is the minimal algorithmic modification that
+exploits both: per-token role gating, plus a verifier head that decouples
+substructure correctness from teacher mimicry.
+
+\paragraph{Why a new corpus?} \ideaevolving's eval-only release does not
+suffice for training: the 1{,}029 instances are too few for supervised
+fine-tuning, lack evidence-grounding for verifier-based RL, and overlap with
+the evaluation set. Concurrent work Intern-Atlas (\todo{cite arXiv
+2604.28158}) provides 1M papers at method-entity granularity but lacks the
+genome decomposition and dynamics taxonomy required to train a model on the
+\emph{why} of paper evolution. \genetrace{} fills the gap between these two:
+training-scale (5K--50K), structured (six fields + five dynamics), grounded
+(per-field evidence quotes), and reward-ready (per-annotation verifier
+scores).

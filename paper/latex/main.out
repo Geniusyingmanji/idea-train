@@ -1,0 +1,29 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
+\BOOKMARK [1][-]{section.3}{GeneTrace}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Schema}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Construction pipeline}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Contamination guard}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Dataset statistics}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{evo-OPD: Lineage-Aware On-Policy Distillation}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Per-token role gating}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Per-token reward}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Verifier-anchored reward}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{Lineage-consistency self-signal}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.5}{Open-ended generalisation}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.6}{Training data shape}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Experiments}{}% 15
+\BOOKMARK [2][-]{subsection.5.1}{Setup}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.2}{GENE-bench main result}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.3}{Open-ended \(GENE-Arena\) result}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.4}{Component ablations}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.5}{Pipeline ablations}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.6}{Contamination diagnostic}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.7}{Cross-domain transfer \(v0.2 preview\)}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 23
+\BOOKMARK [1][-]{appendix.A}{GenomeCard JSON Schema}{}% 24
+\BOOKMARK [1][-]{appendix.B}{Verifier Subscores}{}% 25
+\BOOKMARK [1][-]{appendix.C}{evo-OPD Training Record Schema}{}% 26
+\BOOKMARK [1][-]{appendix.D}{Lenient Scoring}{}% 27
+\BOOKMARK [1][-]{appendix.E}{Human-Eval Inter-Rater Agreement}{}% 28
+\BOOKMARK [1][-]{appendix.F}{Reproducibility Checklist}{}% 29

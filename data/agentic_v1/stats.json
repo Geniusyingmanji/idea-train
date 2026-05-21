@@ -1,0 +1,27 @@
+{
+  "n_cards": 855,
+  "n_edges": 300,
+  "n_prompts": 248,
+  "ancestry_length_hist": {
+    "1": 148,
+    "3": 25,
+    "2": 52,
+    "5": 3,
+    "4": 12,
+    "9": 1,
+    "6": 4,
+    "7": 2,
+    "10": 1
+  },
+  "discipline_counts": {
+    "cs": 152,
+    "mathematics": 15,
+    "biology": 18,
+    "corpus": 11,
+    "physics": 20,
+    "neuroscience": 25,
+    "golden_trace": 6,
+    "chemistry": 1
+  },
+  "max_ancestor_depth": 4
+}

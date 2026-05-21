@@ -1,0 +1,28 @@
+{
+  "trace_id": "biology_SingleCellFoundation",
+  "task_id": "biology_SingleCellFoundation",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v1",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"CellFusionNet: a unified multi-modal pretraining framework that jointly learns transcriptomics, ATAC-seq, methylation, CITE-seq, and spatial transcriptomics through cross-modal masked reconstruction, contrastive alignment, and cell-type-specific latent factor sharing, with a modular Transformer-based architecture that separates modal-specific encoders from shared cell identity and spatial embedding layers.\",\n  \"niche_genome\": \"Human and model organism single-cell multi-omics datasets spanning bulk, droplet, spatial, CITE-seq, ATAC, methylation, and proteomic modalities, especially cross-modal cell-type transitions, lineage differentiation, disease heterogeneity, and spatial organization.\",\n  \"observation_genome\": \"On benchmark datasets, CellFusionNet should outperform CellFM-style transcriptomics-only pretraining on cross-modal cell-type prediction, spatial reconstruction, and proteomic transfer, while maintaining or improving transcriptome-level cell-type resolution.\",\n  \"limitation_addressed\": \"CellFM’s limitation to transcriptomics is repaired by integrating epigenomics, proteomics, and spatial transcriptomics within a single unified pretraining objective, while preserving cell-type-specific resolution through shared latent cell identity factors rather than forcing all modalities into one homogeneous representation.\",\n  \"delta_genome\": \"This changes the CellFM lineage by adding epigenomic, proteomic, and spatial modalities to the foundation model, moving from transcriptome-centric pretraining to a multi-omics foundation model with cross-modal generative transfer.\",\n  \"claim_genome\": \"A truly multi-modal single-cell foundation model can jointly pretrain across transcriptomics, ATAC-seq, methylation, CITE-seq, and spatial transcriptomics while preserving cell-type-specific resolution and enabling cross-modal generative transfer.\"\n}\n```",
+  "prompt": "You are a senior researcher in Computational Biology / Single-Cell Genomics.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nCellFM achieves state-of-the-art performance through massive scale (800M parameters, 100M cells) but remains limited to transcriptomics. What mechanism would enable a truly multi-modal single-cell foundation model that jointly pretrains on transcriptomics, epigenomics (ATAC-seq, methylation), proteomics (CITE-seq), and spatial transcriptomics within a unified framework, while preserving cell-type-specific resolution and enabling cross-modal generative transfer?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1019,
+  "latency_ms": 354773.59914779663,
+  "timestamp": "2026-05-20T17:28:49Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

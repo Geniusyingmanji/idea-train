@@ -1,0 +1,12 @@
+{
+  "n_calls": 865,
+  "n_api_ok": 865,
+  "n_api_err": 0,
+  "n_accepted": 865,
+  "acceptance_rate": 1.0,
+  "elapsed_seconds": 527.1206021308899,
+  "detail": {
+    "accept_gene_card_extract": 856,
+    "accept_idea_generate": 9
+  }
+}

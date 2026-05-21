@@ -1,0 +1,37 @@
+{
+  "trace_id": "earth_science_RemoteSensingFoundation",
+  "task_id": "earth_science_RemoteSensingFoundation",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Remote Sensing / Satellite Image Foundation Models.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nSkySense++ unifies multimodal remote-sensing representations and improves few-shot Earth-observation tasks, but it still lacks explicit geophysical constraints, causal change reasoning, and decision-time uncertainty. What foundation model would fuse optical, SAR, hyperspectral, LiDAR, and temporal data with physical Earth-system knowledge and natural-language interfaces for trustworthy open-vocabulary disaster and environmental monitoring?\n\n[Paper 1] SpectralGPT: Spectral Remote Sensing Foundation Model\nBrief Abstract: Proposed SpectralGPT, a 600M+ parameter 3D generative pretrained transformer purpose-built for spectral remote sensing that captures spatial-spectral coupling through 3D token generation and multi-target reconstruction, pretrained on one million spectral images.\n\n[Paper 2] Scale-MAE: A Scale-Aware Masked Autoencoder for Multiscale Geospatial Representation Learning\nBrief Abstract: Proposed Scale-MAE, the first masked autoencoder to incorporate explicit scale awareness for geospatial data through Ground Sample Distance Positional Encoding (GSDPE), enabling a single pretrained model to handle satellite images at varying spatial resolutions.\n\n[Paper 3] Foundation Models for Generalist Geospatial Artificial Intelligence\nBrief Abstract: Introduced Prithvi, a 100M-parameter transformer-based geospatial foundation model collaboratively developed by NASA and IBM, pretrained on over 1TB of Harmonized Landsat-Sentinel 2 (HLS) multi-spectral satellite imagery and openly released for the Earth science community.\n\n[Paper 4] SkySense: A Multi-Modal Remote Sensing Foundation Model Towards Universal Interpretation for Earth Observation Imagery\nBrief Abstract: Introduced SkySense, the largest multi-modal remote sensing foundation model at the time, pretrained on 21.5 million temporal sequences of optical and SAR imagery using a factorized multi-modal spatiotemporal encoder and multi-granularity contrastive learning.\n\n[Paper 5] SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery\nBrief Abstract: Introduced SatMAE, a masked autoencoder framework adapted for temporal and multi-spectral satellite imagery that uses temporal embeddings, independent patch masking across time, and spectral group encodings to achieve strong self-supervised pretraining for remote sensing.\n\n[Paper 6] A semantic-enhanced multi-modal remote sensing foundation model for Earth observation\nBrief Abstract: Introduced SkySense++, which extends multi-modal remote sensing foundation models with semantic enhancement by pretraining on 27 million multi-modal images, achieving robust generalization and few-shot capabilities across diverse Earth observation tasks including agriculture and disaster management.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1097,
+  "latency_ms": 348491.0047054291,
+  "timestamp": "2026-05-20T22:35:48Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 5,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4314139170",
+      "oa:W4314139171",
+      "oa:W4314139172",
+      "oa:W4314139173",
+      "oa:W4314139174"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

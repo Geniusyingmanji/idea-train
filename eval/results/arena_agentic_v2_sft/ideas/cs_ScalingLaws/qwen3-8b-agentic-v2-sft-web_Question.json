@@ -1,0 +1,33 @@
+{
+  "trace_id": "cs_ScalingLaws",
+  "task_id": "cs_ScalingLaws",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Train a task-type router over a heterogeneous benchmark of LLM inference budgets and T²-optimal models, then route new prompts to the model whose pretraining-inference tradeoff is expected to minimize expected inference cost for the task type.\",\n  \"niche_genome\": \"Large language models optimized for diverse downstream tasks where inference compute budgets vary across task types, such as short-answer generation, long-form reasoning, code generation, summarization, and multi-hop QA.\",\n  \"observation_genome\": \"A router trained on task-type metadata and inference-cost estimates should reduce average inference cost relative to fixed-model T² scaling, especially when tasks have widely differing compute requirements.\",\n  \"limitation_genome\": \"The router depends on accurate task-type metadata, budget estimates, and a representative set of T²-optimal models; it may also transfer poorly to rare or out-of-distribution task types.\",\n  \"delta_genome\": \"Moves T² scaling from a fixed-task optimization to a task-adaptive routing layer that dynamically selects the model whose expected inference compute is best aligned with the prompt’s task type.\",\n  \"claim_genome\": \"Task-adaptive T² routing can improve cost-efficiency across heterogeneous downstream tasks without sacrificing accuracy relative to a fixed T²-optimal model for the most common task type.\"\n}\n```",
+  "prompt": "You are a senior researcher in Large Language Models / Scaling Theory.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nT² scaling laws optimize the pretraining-inference tradeoff for a fixed task, but different tasks have radically different inference compute requirements. What mechanism would enable task-adaptive T² scaling — dynamically routing problems to models optimally pretrained for the expected inference compute budget of that task type?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 877,
+  "latency_ms": 203564.6722316742,
+  "timestamp": "2026-05-20T21:50:27Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 4,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008339204"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

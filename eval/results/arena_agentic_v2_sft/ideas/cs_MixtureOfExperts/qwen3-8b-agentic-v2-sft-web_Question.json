@@ -1,0 +1,33 @@
+{
+  "trace_id": "cs_MixtureOfExperts",
+  "task_id": "cs_MixtureOfExperts",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Introduce a self-organizing MoE routing layer that learns task-specific expert clusters and dynamically assigns agents to sub-networks of specialized experts rather than routing through a fixed expert selection graph.\",\n  \"niche_genome\": \"Long-horizon agentic workflows for Kimi-style large multimodal LLMs, especially tasks requiring sequential multimodal reasoning, planning, retrieval, tool use, and cross-modal synthesis.\",\n  \"observation_genome\": \"The method should reduce coordination overhead, improve task-specific accuracy, and lower wall-clock latency for multi-step agentic tasks compared with static MoE and flat agent-swarm orchestration.\",\n  \"limitation_genome\": \"Requires a principled way to discover sub-networks without overfitting to task labels, while preserving generalization across unseen task sequences and multimodal modalities.\",\n  \"delta_genome\": \"Moves from ad-hoc agent orchestration and fixed MoE routing to a learned, self-organizing MoE topology where each sub-network specializes in a latent task role.\",\n  \"claim_genome\": \"A self-organizing MoE architecture can outperform fixed MoE and flat agent-swarm orchestration on long-horizon agentic multimodal tasks by enabling task-specialized expert sub-networks that self-organize during execution.\"\n}\n```",
+  "prompt": "You are a senior researcher in Efficient LLM Architecture / Scaling.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nKimi K2.5 scales MoE to agentic multimodal tasks but Agent Swarm coordination relies on ad-hoc orchestration. What mechanism would enable principled expert specialization in MoE — where individual experts self-organize into task-specialized sub-networks for long-horizon agentic workflows?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 676,
+  "latency_ms": 148447.824716568,
+  "timestamp": "2026-05-20T20:51:47Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 3,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4374230809"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

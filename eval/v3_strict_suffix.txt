@@ -1,0 +1,4 @@
+
+
+CRITICAL OUTPUT FORMAT:
+Respond ONLY with a single ```json ... ``` fenced code block. Inside, emit a JSON object whose keys are the LOWERCASE schema names exactly as defined for this task type (e.g., "driver" not "Driver"; "dynamics" not "Dynamics"; "correct_order" not "Order"; "mapping" not "Mapping"). Do NOT capitalize keys. Do NOT use alternative names. Keys are case-sensitive.

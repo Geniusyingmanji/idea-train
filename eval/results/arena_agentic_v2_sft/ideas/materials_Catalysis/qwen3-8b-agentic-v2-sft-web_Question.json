@@ -1,0 +1,34 @@
+{
+  "trace_id": "materials_Catalysis",
+  "task_id": "materials_Catalysis",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a unified uncertainty-calibrated atomistic foundation model for catalytic MOFs, trained on MOFSimBench-like benchmark datasets and operando reaction trajectories, with separate uncertainty heads for interatomic forces, host-guest interactions, solvent effects, reactive-site descriptors, and operando reaction conditions.\",\n  \"niche_genome\": \"Nanoporous catalytic materials including metal-organic frameworks, zeolitic imidazolate frameworks, porous coordination polymers, and related materials under realistic reaction environments such as CO2 hydrogenation, CO oxidation, methanol synthesis, and ammonia synthesis.\",\n  \"observation_genome\": \"The model should produce more reliable predictions than idealized static adsorption energies alone, with calibrated uncertainty that flags unreliable predictions for flexible frameworks, host-guest interactions, solvent effects, reactive sites, and operando conditions; active discovery should prefer scaffolds and sites where the model is both accurate and confident.\",\n  \"limitation_genome\": \"The proposal depends on access to large, diverse operando reaction datasets and benchmarked MOFSimBench-style validation sets; uncertainty calibration is computationally expensive and may not fully resolve all nanoscale variability in framework flexibility and guest-host dynamics.\",\n  \"delta_genome\": \"Compared with universal ML interatomic potentials, this work adds uncertainty calibration across flexible framework descriptors, host-guest interaction terms, solvent-aware force fields, reactive-site descriptors, and operando reaction conditions, rather than relying on one static interatomic potential trained for idealized adsorption.\",\n  \"claim_genome\": \"A unified uncertainty-calibrated atomistic foundation model will enable active discovery of catalytic MOFs and related nanoporous catalysts by identifying promising scaffolds and sites where both catalytic activity and prediction reliability are high, while avoiding false confidence in unreliable flexible frameworks, solvent-dependent interactions, and operando reaction environments.\"\n}\n```",
+  "prompt": "You are a senior researcher in Materials Science / Catalysis Design.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nMOFSimBench shows that universal machine-learning interatomic potentials are becoming useful for nanoporous materials, but reliability remains uneven for flexible frameworks, host-guest interactions, solvent effects, reactive sites, and operando conditions. What uncertainty-calibrated atomistic foundation model would enable active discovery and validation of catalytic MOFs and related nanoporous catalysts under realistic reaction environments, rather than relying on idealized static adsorption energies alone?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1320,
+  "latency_ms": 313442.0795440674,
+  "timestamp": "2026-05-21T00:56:38Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008319388",
+      "oa:W4328653029"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

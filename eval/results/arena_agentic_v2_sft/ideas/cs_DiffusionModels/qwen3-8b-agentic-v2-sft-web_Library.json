@@ -1,0 +1,34 @@
+{
+  "trace_id": "cs_DiffusionModels",
+  "task_id": "cs_DiffusionModels",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Interactive DreamWorld++: a video diffusion model that jointly predicts video pixels and world features, then learns a causal interaction layer that maps user actions or simulated agent actions into changes to world-state variables before sampling the next frame. The model would use learned physical constraints, object dynamics, and contact forces to ensure that actions produce physically consistent future states, rather than only enforcing consistency through pixels and world features.\",\n  \"niche_genome\": \"Interactive video generation and world simulation where agents can manipulate objects, move through environments, or perform actions whose effects are physically consistent across frames. Applications include interactive video editing, robotic planning in simulated worlds, and agent-driven storytelling.\",\n  \"observation_genome\": \"Compared with DreamWorld and Sora, the proposed model should generate longer coherent videos with actions that change object positions, velocities, or object-state variables, and the generated world should show physically plausible transitions when an agent pushes a box, throws a ball, or walks through a door.\",\n  \"limitation_genome\": \"The idea depends on a learned physical constraint module that may not generalize across all object categories or unseen environments, and the interaction policy may require supervision or reinforcement to avoid brittle or unrealistic actions.\",\n  \"delta_genome\": \"Relative to DreamWorld, the change is to turn jointly predicted world features into causal state variables whose values are updated before sampling the next frame. Relative to Sora, the change is to add an explicit interaction layer that maps actions into physical changes, rather than only producing consistent video pixels.\",\n  \"claim_genome\": \"A video diffusion model that jointly predicts pixels and world-state variables and uses learned causal interaction can generate longer, more interactive videos where actions taken in the generated world causally affect future states in physically consistent ways.\"\n}\n```",
+  "prompt": "You are a senior researcher in Generative Models / Computer Vision.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nDreamWorld jointly models video pixels and world features but cannot interact with or reason about the generated world. What mechanism would enable an interactive world model — where actions taken in the generated world causally affect future world states in physically consistent ways?\n\n[Paper 1] Scalable Diffusion Models with Transformers\nBrief Abstract: DiT: replaces U-Net backbone with Vision Transformer; diffusion model quality scales predictably with transformer size (Gflops).\n\n[Paper 2] Denoising Diffusion Implicit Models\nBrief Abstract: DDIM: non-Markovian forward process enables deterministic sampling in 10-50 steps instead of 1000, 10-50x speedup with similar quality.\n\n[Paper 3] High-Resolution Image Synthesis with Latent Diffusion Models\nBrief Abstract: LDM (Stable Diffusion): run diffusion in a compressed VAE latent space; text conditioning via cross-attention; enables high-resolution generation at affordable compute.\n\n[Paper 4] Sora: Video generation models as world simulators\nBrief Abstract: Sora: extends DiT to video generation via spatiotemporal patches; generates up to 60-second consistent videos; positions video diffusion as world simulation.\n\n[Paper 5] Denoising Diffusion Probabilistic Models\nBrief Abstract: DDPM: establishes the modern diffusion framework — forward Markov chain adds Gaussian noise, reverse process learned by a U-Net predicting noise.\n\n[Paper 6] DreamWorld: Unified World Modeling in Video Generation\nBrief Abstract: Joint World Modeling Paradigm: simultaneously predicts video pixels and world-model features (temporal dynamics, spatial geometry, semantic consistency); bridges diffusion video generation with world-model understanding; introduces Consistent Constraint Annealing and Multi-Source Inner-Guidance.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1686,
+  "latency_ms": 325067.6414966583,
+  "timestamp": "2026-05-20T20:18:03Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 2,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4409123080",
+      "oa:W4409123080"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,136 @@
+\section{\evoopd: Lineage-Aware On-Policy Distillation}
+\label{sec:method}
+
+\evoopd{} extends on-policy distillation with two additional signals
+required for the genome-centric setting: a \emph{verifier-anchored
+reward} that exploits the substructure of \genetrace's verifier, and a
+\emph{lineage-consistency self-signal} that uses lineage chains to provide
+supervision in the absence of gold answers. Both signals are coupled with
+the standard teacher reverse-KL via per-token role gating.
+
+\subsection{Per-token role gating}
+\label{sec:method:phi}
+
+For each token $t$ in a student rollout $y$, a deterministic
+parser~\citep{evo_opd_parser_impl} assigns one of six role tags
+$\phi(t) \in \{$boilerplate, content\_field, evidence\_span,
+dynamics\_label, gold\_answer, unknown$\}$ based on the rollout's JSON
+structure and the GeneTrace schema. Each role has a fixed weight $\alpha(\phi(t))$
+(Table~\ref{tab:phi_weights}): boilerplate (JSON brackets, field names)
+receives low weight; content fields and dynamics labels receive high
+weight. Token-level gating concentrates the optimisation signal on the
+tokens that actually carry task semantics.
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    Role $\phi$ & Weight $\alpha(\phi)$ \\
+    \midrule
+    boilerplate     & 0.3 \\
+    content\_field  & 1.0 \\
+    evidence\_span  & 1.5 \\
+    dynamics\_label & 2.0 \\
+    gold\_answer    & 0.0 \\
+    unknown         & 0.5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Per-role weights $\alpha(\phi)$. \texttt{gold\_answer} tokens
+  are zero-weighted because they are handled separately by the verifier
+  head (Sec.~\ref{sec:method:verifier}).}
+  \label{tab:phi_weights}
+\end{table}
+
+\subsection{Per-token reward}
+\label{sec:method:reward}
+
+For each token $t$, the per-token reward combines three signals:
+
+\begin{align}
+  r_t = &- \alpha(\phi(t)) \cdot \mathrm{KL}[\pi_\theta \,\|\, \pi_T](y_t) \nonumber \\
+        &+ \alpha(\phi(t)) \cdot \lambda_v \cdot v_{\mathrm{adv}}(y, t) \nonumber \\
+        &+ \alpha(\phi(t)) \cdot \lambda_c \cdot c_{\mathrm{adv}}(y, p, t)
+  \label{eq:rt}
+\end{align}
+
+where $\pi_\theta$ is the student, $\pi_T$ is the teacher,
+$v_{\mathrm{adv}}$ is the per-token verifier advantage
+(Sec.~\ref{sec:method:verifier}), and $c_{\mathrm{adv}}$ is the
+per-token lineage-consistency advantage (Sec.~\ref{sec:method:lineage}).
+$\lambda_v$ and $\lambda_c$ are scalar loss weights.
+
+The policy is updated by standard PG on
+$\sum_t r_t \cdot \nabla \log \pi_\theta(y_t | y_{<t}, x)$ with no critic
+and no reference-KL term (these are subsumed by the teacher-KL
+contribution).
+
+\subsection{Verifier-anchored reward}
+\label{sec:method:verifier}
+
+The verifier $v: y \mapsto [0, 1]$ from \genetrace{}
+(Sec.~\ref{sec:genetrace}) is composed of four subscores:
+$v_{\mathrm{schema}}$, $v_{\mathrm{evidence}}$, $v_{\mathrm{dynamics}}$,
+$v_{\mathrm{match}}$. For closed-form tasks (e.g., \geneexam{}),
+$v_{\mathrm{match}}$ is a 0/1 exact match against gold. For open-ended
+tasks, $v_{\mathrm{match}}$ is replaced by a continuous PES rubric judge
+\citep{ideaevolving2025} that scores Heredity, Variation, and Selection
+on a 0--10 scale and normalises to $[0, 1]$.
+
+The per-token advantage distributes the trajectory-level score across
+tokens proportional to their role weight:
+\begin{equation}
+  v_{\mathrm{adv}}(y, t) = (v(y) - \bar{v}) \cdot \mathbb{1}[\phi(t) \in \mathcal{R}_v]
+  \label{eq:vadv}
+\end{equation}
+where $\mathcal{R}_v = \{$content\_field, evidence\_span, dynamics\_label$\}$
+and $\bar{v}$ is a running baseline.
+
+\subsection{Lineage-consistency self-signal}
+\label{sec:method:lineage}
+
+The lineage-consistency score $c(y, p) \in [0, 1]$ measures whether the
+student's output $y$ on paper $p$ is consistent with $p$'s lineage
+context. For tasks where $y$ proposes a successor paper, $c$ is computed
+by re-prompting the student to predict the \emph{predecessor} of the
+proposed successor and comparing to the ground-truth predecessor card
+from \genetrace; high $c$ means the proposal is lineage-faithful. For
+tasks where $y$ classifies a relationship between two papers, $c$ is
+computed by checking the prediction on a held-out third paper in the
+same chain.
+
+Critically, $c$ requires no gold answer for $y$ itself --- only the
+lineage structure of the \genetrace{} corpus. This makes it applicable
+to open-ended tasks where exact-match cannot fire.
+
+\subsection{Open-ended generalisation}
+\label{sec:method:open}
+
+The same three-component reward (Eq.~\ref{eq:rt}) applies to open-ended
+tasks with two substitutions: $v_{\mathrm{match}}$ becomes the continuous
+PES judge, and $c$ uses the backward-prediction variant above. No
+algorithmic change is required. We show in
+Section~\ref{sec:exp:open_ended} that \evoopd{} improves PES scores on
+\geneexam{} \texttt{GENE-Arena} by \todo{X} points over vanilla OPD,
+demonstrating that the lineage-consistency signal carries the load when
+the verifier alone provides only a noisy rubric score.
+
+When $\lambda_v = \lambda_c = 0$, Eq.~\ref{eq:rt} reduces to vanilla
+on-policy distillation with per-token role gating; when additionally
+$\alpha \equiv 1$, it reduces to the Tinker recipe \citep{tinker_opd_2025}.
+This makes \evoopd{} non-inferior to vanilla OPD by construction (modulo
+optimisation noise), and the ablations in Sec.~\ref{sec:exp:ablation}
+quantify the contribution of each component.
+
+\subsection{Training data shape}
+\label{sec:method:data}
+
+Unlike SFT, \evoopd's training data is regenerated each step from
+on-policy rollouts. A single training record contains: the prompt $x$
+(sampled from a fixed prompt pool of $\sim$10K, drawn from \genetrace{}
++ math/code preservation + \geneexam{} Arena prompts); the student
+rollout $y$; the teacher per-token log-probabilities $\log \pi_T(y_t |
+y_{<t}, x)$; the per-token role tags $\phi(t)$ from the parser; the
+verifier subscores $v(y)$; the lineage anchor and computed $c(y, p)$;
+and the resulting per-token reward $r_t$. Full schema in
+Appendix~\ref{app:opd_record}.

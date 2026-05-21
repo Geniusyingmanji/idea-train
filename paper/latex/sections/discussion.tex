@@ -1,0 +1,50 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What the genome layer adds over method-entity graphs.}
+Concurrent work Intern-Atlas demonstrates that 1M-paper method-entity
+graphs are constructible automatically. \genetrace{} is much smaller
+(5K--50K), but each annotation is structurally richer. Our hypothesis is
+that for \emph{training} a model to reason about paper evolution, depth
+matters more than breadth --- because the model needs supervision on
+\emph{why} edges exist, not just \emph{that} they exist. The
+cross-domain transfer experiment (Sec.~\ref{sec:exp:transfer}) is one
+test of this hypothesis: if the genome paradigm is genuinely a
+representational improvement, models trained on it should transfer
+across domains where method-entity vocabulary differs.
+
+\paragraph{When does the lineage-consistency signal help?}
+Ablation L2 (drop verifier) and L3 (drop lineage) decompose the
+contribution of the two new signals. We expect L3 (no lineage) to lose
+the most on open-ended tasks --- where the verifier provides only a
+noisy rubric and the lineage signal is the load-bearing reward --- and
+L2 (no verifier) to lose the most on closed-form exam tasks. The
+asymmetry justifies including both signals rather than picking one.
+
+\paragraph{Teacher staleness during \evoopd{} training.}
+On-policy distillation re-queries the teacher every rollout, which is
+expensive at scale. We amortise teacher queries by serving the teacher
+on a dedicated GPU and batching rollouts; one open question is whether
+infrequent teacher updates (every $K$ rollouts) degrade learning, and at
+what $K$ the trade-off flips. Sec.~\ref{sec:exp:ablation} L7 probes one
+variant of this question.
+
+\paragraph{The contamination guard is a design decision, not just an
+audit.} Most paper-graph corpora released to date do not ship with a
+denylist or temporal cut explicitly tied to a downstream benchmark. We
+argue this should be standard practice: any corpus intended for
+training models evaluated on benchmarks derived from the same
+literature must demonstrate the disjointness end-to-end, ideally with
+re-runnable code. \genetrace{} ships such code with the release.
+
+\paragraph{Failure modes observed during construction.}
+During the \genetrace{} v0.1 build, we observed three recurrent failure
+modes in teacher annotations: (a) the teacher omits evidence quotes
+when the source paper is sparse (e.g., abstract-only); (b) the teacher
+prefers \textit{Speciation} over \textit{Mutation} when the paper-pair
+$\delta$ is large but the dynamics are actually \textit{Mutation} + new
+benchmark; (c) the teacher hallucinates HYBRIDIZED fates for pairs that
+share keywords but not actual technique provenance. The verifier
+catches (a) and (c) automatically; (b) requires human review on a
+sample. We report inter-rater agreement on a 200-instance human-judged
+slice in Appendix~\ref{app:human_eval}.

@@ -1,0 +1,97 @@
+\section{Experiments}
+\label{sec:exp}
+
+\subsection{Setup}
+\label{sec:exp:setup}
+
+\paragraph{Student and teacher.} The student is Qwen3-8B
+(instruction-tuned) \citep{qwen3_2025}; the OPD teacher is
+Qwen3-14B-Thinking (open weights) served locally via vLLM on a single
+A100 80GB. All SFT and \evoopd{} training uses LoRA \citep{hu2021lora}
+with rank 64, $\alpha=128$, applied to all linear layers.
+
+\paragraph{Benchmarks.}
+\geneexam{} \emph{main challenge} (1,029 instances spanning 42 task
+types in tiers T1--T4) is the closed-form evaluation. \texttt{GENE-Arena}
+(\todo{N} prompts judged on the PES rubric) is the open-ended
+evaluation. We additionally report on \texttt{MATH} and \texttt{HumanEval}
+to verify no regression on math/code.
+
+\paragraph{Baselines.} (1) Qwen3-8B no-think (baseline); (2) SFT on
+\genetrace-derived examples; (3) GRPO with our verifier; (4) Vanilla OPD
+(Tinker recipe) with the same teacher; (5) GRPO $\to$ OPD; (6) \evoopd{}.
+All variants use matched compute.
+
+\paragraph{Contamination check.} Before training, we compute Min-K\%++
+\citep{shi2024minkpp} on \geneexam{} papers against the trained model;
+report in Sec.~\ref{sec:exp:contamination} that all variants have
+Min-20\%++ $<$ 0.05, consistent with no leakage.
+
+\subsection{\geneexam{} main result}
+\label{sec:exp:main}
+
+\todo{Insert Table~\ref{tab:main_geneexam} with strict + lenient
+accuracy for all variants. Headline: SFT 11.27\%, \evoopd{} target X\%.}
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{lrr}
+    \toprule
+    Model            & Strict (\%) & Lenient (\%) \\
+    \midrule
+    Qwen3-8B (baseline)    & 0.68 & 7.77 \\
+    \quad + SFT (\genetrace) & 1.17 & 11.27 \\
+    \quad + GRPO            & \todo{} & \todo{} \\
+    \quad + vanilla OPD     & \todo{} & \todo{} \\
+    \quad + \evoopd{}       & \todo{} & \todo{} \\
+    \midrule
+    GPT-5.5 (frontier ref.) & 23.10 & 23.10 \\
+    \bottomrule
+  \end{tabular}
+  \caption{\geneexam{} main challenge, no-think mode. Lenient applies
+  key-name normalisation; see Appendix~\ref{app:lenient}.}
+  \label{tab:main_geneexam}
+\end{table}
+
+\subsection{Open-ended (\texttt{GENE-Arena}) result}
+\label{sec:exp:open_ended}
+
+\todo{Insert PES scores per dimension; show \evoopd{} > vanilla OPD on
+all three (Heredity especially, given the lineage signal).}
+
+\subsection{Component ablations}
+\label{sec:exp:ablation}
+
+We ablate the three components of \evoopd{} on \geneexam{} and
+\texttt{GENE-Arena}:
+\textbf{(L1)} $\alpha \equiv 1$, $\lambda_v=\lambda_c=0$: vanilla OPD;
+\textbf{(L2)} drop verifier ($\lambda_v=0$): teacher-KL + lineage only;
+\textbf{(L3)} drop lineage ($\lambda_c=0$): teacher-KL + verifier only;
+\textbf{(L4)} drop role gating ($\alpha \equiv 1$): all three signals,
+no per-token weighting;
+\textbf{(L7)} swap Qwen3-14B teacher for GPT-5.5 Black-Box (top-20
+logprobs): tests the teacher choice independently.
+
+\todo{Insert Table~\ref{tab:ablation}}.
+
+\subsection{Pipeline ablations}
+\label{sec:exp:pipeline}
+
+We ablate the broader training pipeline: SFT-only, SFT $\to$ GRPO,
+SFT $\to$ vanilla OPD, SFT $\to$ \evoopd{}, SFT $\to$ GRPO $\to$
+\evoopd{}, and \evoopd{} from base (no SFT). This isolates whether
+\evoopd{} requires a GRPO warm-up or can be applied directly after SFT.
+
+\subsection{Contamination diagnostic}
+\label{sec:exp:contamination}
+
+\todo{Report Min-K\%++ for each \geneexam{} paper subject under each
+trained checkpoint; baseline = Qwen3-8B before any fine-tuning.}
+
+\subsection{Cross-domain transfer (v0.2 preview)}
+\label{sec:exp:transfer}
+
+To test whether the genome paradigm generalises beyond CS papers, we
+evaluate the SFT $\to$ \evoopd{} model on a held-out 200-paper biology
+slice from \genetrace{} v0.2. \todo{Report transfer numbers.}

@@ -1,0 +1,28 @@
+{
+  "trace_id": "agriculture_SoilRemoteSensing",
+  "task_id": "agriculture_SoilRemoteSensing",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v1",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a field-scale soil digital twin foundation model that jointly trains on Prithvi-EO-2.0-like spatiotemporal satellite imagery, UAV/field UAV remote sensing, in-situ soil sensors, and laboratory soil spectroscopy, with a modular architecture that decouples above-ground remote sensing, below-ground soil composition, and SOC change dynamics.\",\n  \"niche_genome\": \"Carbon monitoring and soil property prediction in cropland fields where satellite imagery captures large-area trends but SOC and soil-specific properties such as texture, mineralogy, and organic matter dynamics are dominated by subsurface heterogeneity.\",\n  \"observation_genome\": \"The model should improve SOC prediction and change detection compared with satellite-only or sensor-only models, especially in fields with spatially variable soil properties, by reducing uncertainty in the soil signal and improving the temporal coherence of carbon dynamics.\",\n  \"limitation_genome\": \"The proposed idea depends on access to paired satellite, UAV, sensor, and spectroscopy data across multiple fields, and may struggle with extrapolation to areas with sparse sensor networks or limited spectroscopic sampling.\",\n  \"delta_genome\": \"This changes prior work by combining Prithvi-EO-2.0-style spatiotemporal ML with below-ground soil spectroscopy and sensor networks, rather than treating satellite-derived SOC monitoring as a standalone EO product or as a separate sensor-driven calibration step.\",\n  \"claim_genome\": \"A unified soil digital twin that fuses above-ground EO with below-ground soil spectroscopy and sensor networks can predict SOC change at field scale more accurately and robustly than models trained only on satellite imagery, UAV imagery, or in-situ sensors alone.\"\n}\n```",
+  "prompt": "You are a senior researcher in Soil Science / Agricultural Remote Sensing.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nPrithvi-EO-2.0 provides a powerful general-purpose geospatial foundation, and spatiotemporal ML enables SOC change monitoring, but soil-specific properties require integration of subsurface information (spectroscopy, in-situ sensors) that satellite imagery alone cannot capture. How can foundation models be extended to fuse above-ground remote sensing with below-ground soil spectroscopy and sensor networks for a unified soil digital twin that tracks carbon dynamics at field scale?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 780,
+  "latency_ms": 248080.12509346008,
+  "timestamp": "2026-05-20T16:20:47Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 5,
+    "search_count": 1,
+    "read_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,61 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Paper-as-graph corpora.} Several efforts have organised the
+scientific literature as a graph. Citation-only graphs (Semantic Scholar
+Open Research Corpus \todo{cite}, OpenAlex \todo{cite}, ArXiv) provide
+breadth but no semantic edge typing. Concurrent with our work,
+\emph{Intern-Atlas} (\todo{cite arXiv 2604.28158}) builds a methodological
+evolution graph on 1M papers, with method-level entities and lineage edges
+grounded in source text. \genetrace{} is complementary: where Intern-Atlas
+covers breadth at method-entity granularity, \genetrace{} covers depth at
+full genome-card granularity. Method-entity edges record \emph{that} a
+technique evolved; genome-card edges with dynamics labels record
+\emph{why}.
+
+\paragraph{The genome paradigm.} Our prior work \ideaevolving{}
+\citep{ideaevolving2025} introduced the six-field genome representation and
+five-mode evolutionary-dynamics taxonomy. The associated \geneexam{}
+benchmark hand-curates 1{,}029 evaluation instances across 42 task types
+(T1: paper-level genome extraction; T2: ordering and grouping; T3:
+dynamics classification; T4: cross-paper consistency). \ideaevolving{}
+demonstrated that the paradigm is human-curatable and that frontier models
+score below 25\% on the benchmark. This paper takes the next step: scaling
+the paradigm to a training-grade corpus and showing that a small open
+model can be trained on it to a non-trivial fraction of frontier
+performance.
+
+\paragraph{On-policy distillation.} On-policy distillation (OPD) trains a
+student on its own rollouts using token-level reverse-KL to a stronger
+teacher. The Tinker recipe \citep{tinker_opd_2025} and the Qwen3 technical
+report \citep{qwen3_2025} both demonstrate that OPD recovers Pass@K
+behaviour of the teacher while preserving student efficiency. These
+recipes use a single signal (teacher distribution) and ignore task
+structure. \evoopd{} extends OPD with two additional signals --- a
+verifier reward and a lineage-consistency self-signal --- coupled at the
+per-token level via role-based gating.
+
+\paragraph{Reinforcement learning from verifiers.} Verifier-based RL
+methods such as DAPO \citep{dapo2025} and Dr.~GRPO \citep{drgrpo2025}
+replace human-feedback reward models with deterministic verifiers (math
+correctness, code unit-tests). These methods provide one scalar reward per
+trajectory and are agnostic to teacher distributions or task structure.
+\evoopd{} reuses the verifier-reward primitive but applies it at the
+per-token-role level, alongside teacher distillation, and adds a
+self-supervised lineage signal.
+
+\paragraph{Scientific-idea generation.} Concurrent systems including
+ResearchAgent \todo{cite}, AutoSurvey \todo{cite}, and AI Scientist
+\todo{cite} use prompt-based pipelines over frontier models to generate
+research proposals or surveys. These systems rely on document-centric
+context and do not train a specialised model. Our work is complementary:
+\genetrace{} could serve as the structured-context layer under such a
+pipeline, and a model trained with \evoopd{} can replace the frontier
+backbone at a fraction of the compute cost.
+
+\paragraph{Open-ended generation evaluation.} The PES rubric introduced in
+\ideaevolving{} (\textit{Heredity}, \textit{Variation}, \textit{Selection}
+\citep{ideaevolving2025}) provides a structured judge for open-ended
+proposal writing. We adopt PES as the open-ended verifier head inside
+\evoopd, integrating it with the schema and evidence checks from the
+closed-form verifier.

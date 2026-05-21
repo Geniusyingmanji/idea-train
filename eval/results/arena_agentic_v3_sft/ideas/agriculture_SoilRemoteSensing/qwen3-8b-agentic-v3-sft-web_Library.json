@@ -1,0 +1,31 @@
+{
+  "trace_id": "agriculture_SoilRemoteSensing",
+  "task_id": "agriculture_SoilRemoteSensing",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Soil Science / Agricultural Remote Sensing.\nBelow are 9 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nPrithvi-EO-2.0 provides a powerful general-purpose geospatial foundation, and spatiotemporal ML enables SOC change monitoring, but soil-specific properties require integration of subsurface information (spectroscopy, in-situ sensors) that satellite imagery alone cannot capture. How can foundation models be extended to fuse above-ground remote sensing with below-ground soil spectroscopy and sensor networks for a unified soil digital twin that tracks carbon dynamics at field scale?\n\n[Paper 1] SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty\nBrief Abstract: Produced global 250m-resolution soil property maps using machine learning (quantile random forests) trained on ~240,000 soil observations and 400+ environmental covariates, with quantified spatial uncertainty.\n\n[Paper 2] SSL-SoilNet: A Hybrid Transformer-based Framework with Self-Supervised Learning for Large-scale Soil Organic Carbon Prediction\nBrief Abstract: Introduced self-supervised contrastive pre-training on large unlabeled remote sensing and climate data, combined with Vision Transformers, for continental-scale soil organic carbon prediction with minimal labeled samples.\n\n[Paper 3] Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications\nBrief Abstract: Released a 600M-parameter geospatial foundation model pre-trained on 4.2 million global time series from NASA's Harmonized Landsat-Sentinel data, achieving SOTA on GEO-bench including crop and soil tasks.\n\n[Paper 4] Soil Properties: Their Prediction and Feature Extraction from the LUCAS Spectral Library Using Deep Convolutional Neural Networks\nBrief Abstract: Developed deep 16-layer 1D DCNNs for soil property prediction with interpretable feature extraction, revealing which spectral regions drive predictions for different soil properties.\n\n[Paper 5] Spatiotemporal prediction of soil organic carbon density in Europe (2000-2022) using earth observation and machine learning\nBrief Abstract: Produced 30m-resolution 3D+T soil organic carbon density maps for Europe from 2000-2022 using spatiotemporal random forest with 45,616 observations and Landsat-derived spectral indices, enabling monitoring of SOC change over two decades.\n\n[Paper 6] Simultaneous Prediction of Soil Properties from VNIR-SWIR Spectra Using a Localized Multi-channel 1-D Convolutional Neural Network\nBrief Abstract: Proposed multi-task multi-channel 1D CNN that simultaneously predicts 10 soil properties from VNIR-SWIR spectra, demonstrating that shared representations across soil properties improve prediction accuracy.\n\n[Paper 7] Image-Based Soil Organic Carbon Remote Sensing from Satellite Images with Fourier Neural Operator and Structural Similarity\nBrief Abstract: Proposed FNO-DenseNet combining Fourier neural operators with DenseNet for image-based SOC mapping from satellite imagery, outperforming pixel-based random forest by 18% in MAPE with hundreds of times fewer parameters than standard FNO.\n\n[Paper 8] Using Deep Learning to Predict Soil Properties from Regional Spectral Data\nBrief Abstract: First demonstration that 1D CNNs can predict multiple soil properties directly from raw Vis-NIR spectra on the LUCAS database, outperforming traditional PLSR and eliminating manual spectral preprocessing.\n\n[Paper 9] Multi-source Data Integration for Soil Mapping Using Deep Learning\nBrief Abstract: Introduced spatial CNN for digital soil mapping that uses local patches of environmental covariates as input, integrating multi-source spatial data for contextual soil property prediction.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 628,
+  "latency_ms": 476585.3114128113,
+  "timestamp": "2026-05-21T02:16:12Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 2,
+    "read_count": 0,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

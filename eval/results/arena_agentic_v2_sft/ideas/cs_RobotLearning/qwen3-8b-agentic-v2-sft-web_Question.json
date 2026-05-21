@@ -1,0 +1,33 @@
+{
+  "trace_id": "cs_RobotLearning",
+  "task_id": "cs_RobotLearning",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"VISALIGN: Visual Self-Supervised VLA Alignment. Train a VLA using a self-supervised reward module that infers alignment rewards from video observations alone. The module learns auxiliary visual dynamics models from unlabeled videos, predicts future frames, object affordances, and trajectory likelihoods, and synthesizes a reward from the confidence and consistency of these predictions. During test time, the VLA uses only the learned visual reward to select actions, eliminating dependence on privileged state information.\",\n  \"niche_genome\": \"Open-world embodied AI agents trained in robot manipulation, navigation, and multi-task robot control. The method targets VLA-style agents that must generalize across unseen environments and tasks, especially when ground-truth state information is unavailable or expensive to acquire.\",\n  \"observation_genome\": \"VISALIGN should improve VLA performance on unseen tasks and unseen environments compared with privileged-state reward baselines. It should maintain or improve success rates while reducing the need for labeled state information, hand-designed reward functions, and environment-specific reward engineering.\",\n  \"limitation_genome\": \"The method assumes sufficient visual data for auxiliary self-supervised learning and may struggle in low-visibility, sparse-observation, or highly ambiguous visual domains. It also risks overfitting to auxiliary prediction tasks rather than the true task-specific alignment objective.\",\n  \"delta_genome\": \"VISALIGN changes RoboAlign-style VLA alignment from a privileged-state reward signal to a self-supervised visual reward derived from video observations alone. It mutates the parent’s test-time RL mechanism by replacing privileged state access with learned visual dynamics and task-specific alignment signals.\",\n  \"claim_genome\": \"A VLA trained with self-supervised visual alignment rewards can achieve comparable or better open-world performance than VLA agents trained with privileged state rewards, without requiring access to ground-truth state information during deployment.\"\n}\n```",
+  "prompt": "You are a senior researcher in Robotics / Embodied AI.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nRoboAlign improves VLA alignment via test-time RL but the reward signal requires privileged state information unavailable in open-world deployment. What mechanism would enable self-supervised VLA alignment — deriving alignment rewards purely from visual observations without ground-truth state access?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1698,
+  "latency_ms": 304417.1586036682,
+  "timestamp": "2026-05-20T21:35:39Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008336078"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

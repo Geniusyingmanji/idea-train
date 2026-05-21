@@ -1,0 +1,36 @@
+{
+  "trace_id": "cs_AttentionEfficiency",
+  "task_id": "cs_AttentionEfficiency",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Systems / Efficient LLM.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nAsyncTLS achieves inference speedup via sparse attention on MLA but the sparsity pattern is fixed at inference time. What mechanism would enable dynamic, content-adaptive sparsity that selects different attention patterns per token and layer based on query semantics while preserving answer fidelity, long-context retrieval reliability, and hardware-efficient scheduling under distribution shift?\n\n[Paper 1] GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints\nBrief Abstract: GQA: group query attention — share one K/V head across G query heads; reduces KV-cache memory by G× while maintaining quality near MHA.\n\n[Paper 2] FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness\nBrief Abstract: FlashAttention: IO-aware tiled kernel computation avoids materializing the N×N attention matrix; 2-4x speedup, sublinear memory in sequence length.\n\n[Paper 3] FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning\nBrief Abstract: FlashAttention-2: better parallelism over sequence dimension and improved work partitioning across thread blocks; achieves ~70% A100 MFU.\n\n[Paper 4] DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model\nBrief Abstract: MLA (Multi-head Latent Attention): compress KV cache via low-rank joint projection, 93.3% KV-cache reduction while outperforming MHA quality.\n\n[Paper 5] Attention Is All You Need\nBrief Abstract: Transformer: multi-head self-attention replacing RNNs; enables parallelizable training; defines the O(n²) KV-cache bottleneck that all subsequent work addresses.\n\n[Paper 6] AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention\nBrief Abstract: Asynchronous block+token sparse attention specifically optimized for MLA architectures; achieves 1.2×-10.0× operator speedup and 1.3×-4.7× end-to-end throughput improvement on MLA-based models by decoupling block-level and token-level sparsity computation with asynchronous memory transfer.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 532,
+  "latency_ms": 359064.4142627716,
+  "timestamp": "2026-05-20T19:50:36Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 4,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W4354508134",
+      "oa:W4354508135",
+      "oa:W4354508136",
+      "oa:W4354508137"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,24 @@
+# Trained model checkpoints (too large for github)
+train/checkpoints/
+
+# Heavy caches
+data/openalex_cache/
+
+# Generation logs (per-call, regenerable)
+**/sft_demos.raw_calls.jsonl
+
+# OS / IDE junk
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.idea/
+.vscode/
+*.swp
+
+# tmp logs not in repo
+*.log
+
+# old draft files
+*.bak
+*.orig

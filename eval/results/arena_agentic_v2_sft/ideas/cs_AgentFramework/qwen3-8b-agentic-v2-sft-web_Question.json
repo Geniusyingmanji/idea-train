@@ -1,0 +1,33 @@
+{
+  "trace_id": "cs_AgentFramework",
+  "task_id": "cs_AgentFramework",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Co-evolve a multi-agent SWE-bench population with an environment model that is continuously updated by failed edits, failed refactor plans, and failed execution traces. The environment model is trained not only on simulated execution but also on a learned failure signature distribution: which edits are likely to fail, which files are likely to be changed, and which real execution side effects are likely to be missing from the simulation. The agent is trained in a simulated environment that is progressively tighter to real execution, while the environment model is trained in a failure-aware latent space that explicitly models which simulated states are noisy and which are reliable.\",\n  \"niche_genome\": \"SWE-bench-style software engineering agents that perform complex multi-file refactors and code edits across real GitHub-like repositories, where real execution is expensive and simulated execution often diverges from actual program behavior.\",\n  \"observation_genome\": \"Agents trained with co-evolved environment models should improve on SWE-bench performance, especially on multi-file refactor tasks where prior learned simulation diverges from real execution. The failure-aware environment model should reduce the number of simulated states that are misleadingly rewarding and increase the number of states where the agent can safely learn from real execution feedback.\",\n  \"limitation_genome\": \"The approach depends on a continuous population of agents and environment models, which may be computationally expensive. It also assumes that failed execution traces can be used to infer which parts of the simulation are noisy rather than just which plans are wrong.\",\n  \"delta_genome\": \"Instead of using a fixed learned environment simulation, this idea turns environment learning into a co-evolutionary loop where agent failures explicitly update the environment model. It adds a failure-aware latent environment representation that separates noisy simulation states from reliable states, rather than treating all simulated execution as equally valid training signal.\",\n  \"claim_genome\": \"A continuously self-improving agent-environment co-evolution that uses agent failures to update the environment model will improve SWE-bench performance on complex multi-file refactor tasks where learned simulation diverges from real execution.\"\n}\n```",
+  "prompt": "You are a senior researcher in LLM Agents / Agentic AI.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nSWE-World achieves 68.2% on SWE-bench via learned environment simulation, but the simulated environment diverges from real execution for complex multi-file refactors. What mechanism would enable a continuously self-improving agent-environment co-evolution — where the agent's failures update the environment model and the improved environment produces better agent training signal?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1534,
+  "latency_ms": 294117.3849105835,
+  "timestamp": "2026-05-20T19:44:37Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 2,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008330891"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

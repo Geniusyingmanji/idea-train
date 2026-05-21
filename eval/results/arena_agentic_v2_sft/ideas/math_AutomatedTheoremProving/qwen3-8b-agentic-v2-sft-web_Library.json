@@ -1,0 +1,33 @@
+{
+  "trace_id": "math_AutomatedTheoremProving",
+  "task_id": "math_AutomatedTheoremProving",
+  "participant_id": "qwen3-8b-agentic-v2-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v2-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Formal Mathematics / Automated Theorem Proving.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nAristotle-style IMO provers show strong formal proof search on well-posed Lean problems, but research mathematics requires formulating conjectures, choosing definitions, and deciding which lemmas matter before a formal target exists. What system would connect informal exploration, Lean-grounded proof search, and conjecture generation for open-ended mathematical research?\n\n[Paper 1] DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data\nBrief Abstract: Generates large-scale synthetic Lean 4 theorem-proof pairs via autoformalization and compiler filtering, enabling LLM-based provers to achieve strong results without human-annotated proofs.\n\n[Paper 2] Formal Mathematics Statement Curriculum Learning\nBrief Abstract: Expert iteration (proof search interleaved with learning) on a curriculum of formal statements dramatically outperforms static proof search, achieving state-of-the-art on miniF2F.\n\n[Paper 3] HyperTree Proof Search for Neural Theorem Proving\nBrief Abstract: AlphaZero-inspired online training procedure with HyperTree Proof Search (HTPS) achieves 82.6% on Metamath, dramatically outperforming GPT-f's 56.5%.\n\n[Paper 4] Olympiad-level formal mathematical reasoning with reinforcement learning\nBrief Abstract: AlphaProof achieves silver-medal performance at the 2024 IMO by combining AlphaZero-style RL with autoformalized training on 100 million formal problems and test-time RL for deep problem-specific adaptation.\n\n[Paper 5] Generative Language Modeling for Automated Theorem Proving\nBrief Abstract: First application of large-scale transformer language models (GPT-f) to automated theorem proving in Metamath, producing proofs accepted into the main Metamath library.\n\n[Paper 6] Aristotle: IMO-level Automated Theorem Proving\nBrief Abstract: Achieves gold-medal performance at IMO 2025 by solving 5 of 6 problems with formally verified Lean 4 proofs, integrating informal natural-language planning with formal proof search via MCTS.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 557,
+  "latency_ms": 364173.4209060669,
+  "timestamp": "2026-05-21T01:47:44Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 1,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 1,
+    "read_paper_ids": [
+      "oa:W3008209528"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}
