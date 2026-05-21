@@ -1,0 +1,31 @@
+{
+  "trace_id": "cs_MixtureOfExperts",
+  "task_id": "cs_MixtureOfExperts",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Efficient LLM Architecture / Scaling.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nKimi K2.5 scales MoE to agentic multimodal tasks but Agent Swarm coordination relies on ad-hoc orchestration. What mechanism would enable principled expert specialization in MoE — where individual experts self-organize into task-specialized sub-networks for long-horizon agentic workflows?\n\n[Paper 1] DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model\nBrief Abstract: DeepSeek-V2: combines fine-grained expert segmentation (top-6 of 160 experts) with MLA for KV compression; 236B total, 21B active; 42.5% cheaper than DeepSeek 67B.\n\n[Paper 2] Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity\nBrief Abstract: Switch Transformer: simplifies MoE to top-1 routing; eliminates auxiliary complexity; scales to 1.6T parameters; demonstrates 7x pre-training speedup.\n\n[Paper 3] Mixtral of Experts\nBrief Abstract: Mixtral 8×7B: MoE with top-2 routing among 8 experts; outperforms LLaMA 2 70B with 5x fewer active parameters; open-source frontier.\n\n[Paper 4] DeepSeek-V3 Technical Report\nBrief Abstract: DeepSeek-V3: 671B total / 37B active MoE with auxiliary-loss-free load balancing and multi-token prediction; achieves frontier quality at 2.788M H800 GPU-hours.\n\n[Paper 5] Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer\nBrief Abstract: Sparsely-gated MoE: conditionally activate top-k of E expert FFN layers per token; capacity factor and auxiliary load balancing loss.\n\n[Paper 6] Kimi K2.5: Visual Agentic Intelligence\nBrief Abstract: 1.04T parameter MoE with 384 experts (32B active); adds native visual MoE via MoonViT-3D; introduces Agent Swarm for parallel agentic task execution reducing latency by up to 4.5×; extends DeepSeek-V3's MoE+MLA design to multimodal and agentic domains.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1159,
+  "latency_ms": 447475.9609699249,
+  "timestamp": "2026-05-21T09:12:55Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 5,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

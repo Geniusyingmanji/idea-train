@@ -1,0 +1,38 @@
+{
+  "trace_id": "cs_TestTimeCompute",
+  "task_id": "cs_TestTimeCompute",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"A calibrated adaptive reasoning controller that dynamically allocates inference-time budget across thinking, branching, verification, and tool calls using a learned controller and uncertainty-aware stopping policy.\",\n  \"niche_genome\": \"LLM-based agents and reasoning systems where inference-time computation is expensive but reasoning quality can improve with additional budget, especially under distribution shift and when fixed heuristics or external reward models are brittle.\",\n  \"observation_genome\": \"Adaptive branching and depth-scaling studies show that more computation can improve reasoning, but current systems still rely on fixed heuristics, external reward models, and brittle stopping rules. Object-detection systems allocate computation across proposals, features, classification, localization, and context modeling, suggesting that reasoning can be treated as a structured allocation problem rather than a single inference pass.\",\n  \"limitation_genome\": \"Existing adaptive reasoning approaches often optimize for accuracy or reward without explicitly maintaining calibrated reliability under distribution shift; they also do not provide a principled controller that jointly optimizes thinking, branching, verification, and tool calls.\",\n  \"delta_genome\": \"Introduce a controller trained with a distribution-shifted calibration objective: learn a policy that maps prompt difficulty, uncertainty estimates, task class, model confidence, and available budget to a budget allocation vector specifying how much to spend on thinking, branching, verification, and tool calls. The controller is trained on a mixture of in-distribution and out-of-distribution reasoning tasks, with a loss that penalizes both error and miscalibrated confidence.\",\n  \"claim_genome\": \"A calibrated adaptive reasoning controller should improve reasoning accuracy and reduce calibrated error under distribution shift compared with fixed heuristics, external reward-based allocation, and standard adaptive depth control, while preserving or improving inference-time efficiency.\"\n}\n```",
+  "prompt": "You are a senior researcher in Inference Scaling / Test-Time Reasoning.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nAdaptive branching and depth-scaling studies show that inference-time compute can improve reasoning, but current systems still depend on fixed heuristics, external reward models, and brittle stopping rules. What controller would allocate budget across thinking, branching, verification, and tool calls per instance while maintaining calibrated reliability under distribution shift?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1323,
+  "latency_ms": 428858.41727256775,
+  "timestamp": "2026-05-21T11:15:04Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 2,
+    "read_count": 6,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4391855109",
+      "oa:W4386794445",
+      "oa:W4393138529",
+      "oa:W4412505619",
+      "oa:W2988916019",
+      "oa:W3140854437"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

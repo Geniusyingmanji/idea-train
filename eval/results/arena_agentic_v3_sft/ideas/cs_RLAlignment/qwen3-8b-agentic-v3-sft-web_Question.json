@@ -1,0 +1,36 @@
+{
+  "trace_id": "cs_RLAlignment",
+  "task_id": "cs_RLAlignment",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Difficulty-aware doubly robust rollout allocation: estimate rollout difficulty using a difficulty score derived from recent trajectory performance, variance, entropy, verifier disagreement, and subgroup heterogeneity. Allocate more rollouts to high-difficulty subproblems and use a doubly robust estimator that combines direct rollout estimates with a learned baseline or verifier signal. Pruning is only applied after difficulty-aware allocation: rollouts with low signal relative to their difficulty are pruned, while high-difficulty rollouts are protected unless they violate a bounded-cost constraint.\",\n  \"niche_genome\": \"Adaptive rollout pruning for LLM alignment and safe RL, especially settings where rollouts are expensive and where exploration diversity is needed on hard problems. Target benchmarks include ARRoL-style safe RL, LLM alignment rollouts, and sequential decision-making environments with heterogeneous subproblems.\",\n  \"observation_genome\": \"ARRoL prunes low-signal rollouts but uses a fixed heuristic; related RL papers suggest uncertainty-aware allocation, process-control-style online adaptation, and causal uplift modeling with doubly robustness. The frontier opportunity is a mechanism that dynamically invests compute on hard problems where exploration diversity is critical while preserving unbiased learning signals and verifier reliability.\",\n  \"limitation_genome\": \"Fixed-rollout pruning can waste compute on easy problems or prune too aggressively on hard problems. It also may not preserve diversity when all high-signal rollouts are in a single easy region. Existing safe RL and LLM-alignment work does not provide a problem-aware rollout allocator that explicitly balances difficulty, diversity, verifier reliability, and bounded training cost.\",\n  \"delta_genome\": \"Replace ARRoL’s fixed pruning heuristic with an online difficulty estimator and a doubly robust rollout allocator. The allocator first estimates difficulty, then allocates rollouts to high-difficulty subproblems and prunes only rollouts whose relative signal is below a difficulty-adjusted threshold. The estimator is trained on recent trajectories, verifier disagreement, and subgroup heterogeneity, and is periodically updated with a bounded budget.\",\n  \"claim_genome\": \"The proposed mechanism should improve final policy performance and verifier reliability while using no more total compute than ARRoL on a suite of safe RL and LLM-alignment benchmarks. It should also show that difficulty-aware allocation preserves unbiasedness better than fixed pruning when high-signal rollouts are concentrated in a small set of hard problems.\"\n}\n```",
+  "prompt": "You are a senior researcher in Reinforcement Learning / LLM Alignment.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nARRoL prunes low-signal rollouts but uses a fixed pruning heuristic. What mechanism would enable adaptive, problem-aware rollout allocation — dynamically investing more compute on hard problems where exploration diversity is critical while preserving unbiased learning signals, verifier reliability, and bounded training cost?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1829,
+  "latency_ms": 441968.9266681671,
+  "timestamp": "2026-05-21T10:11:32Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 3,
+    "read_count": 4,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4308438248",
+      "oa:W4414189375",
+      "oa:W3101189765",
+      "oa:W4224570743"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

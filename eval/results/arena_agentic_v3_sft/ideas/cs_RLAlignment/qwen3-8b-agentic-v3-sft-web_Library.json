@@ -1,0 +1,38 @@
+{
+  "trace_id": "cs_RLAlignment",
+  "task_id": "cs_RLAlignment",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Difficulty-aware rollout allocation: during RLVR or RLHF training, maintain an online difficulty estimator for each prompt/task class, and allocate more rollouts to high-diversity, high-difficulty problems while preserving low-signal rollouts only when they contain useful exploration diversity.\",\n  \"niche_genome\": \"Large language model alignment and reinforcement learning training where expensive rollouts are used to optimize policies from preference data, instruction following, summarization, reasoning, and chat behavior.\",\n  \"observation_genome\": \"ARRoL shows that online pruning can improve RLVR training by removing low-signal rollouts, but its heuristic is fixed and does not distinguish between problems where diversity is needed and problems where signal is weak but not useful.\",\n  \"limitation_genome\": \"Fixed rollout pruning can waste compute on easy problems and prune away the very rollouts that expose useful exploration diversity on hard problems; it also risks bias if the pruning signal correlates with task difficulty.\",\n  \"delta_genome\": \"Add a difficulty-aware budget controller: estimate task difficulty from recent rollout diversity, preference disagreement, policy entropy, and failure modes; allocate extra rollouts to high-difficulty classes when diversity is low; cap rollouts per prompt to ensure unbiased learning signals and bounded training cost.\",\n  \"claim_genome\": \"A difficulty-aware rollout allocator should outperform fixed ARRoL pruning on hard RLVR/RLHF tasks while maintaining or improving accuracy, reducing training cost, and preserving the diversity needed for unbiased policy learning.\"\n}\n```",
+  "prompt": "You are a senior researcher in Reinforcement Learning / LLM Alignment.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nARRoL prunes low-signal rollouts but uses a fixed pruning heuristic. What mechanism would enable adaptive, problem-aware rollout allocation — dynamically investing more compute on hard problems where exploration diversity is critical while preserving unbiased learning signals, verifier reliability, and bounded training cost?\n\n[Paper 1] Direct Preference Optimization: Your Language Model is Secretly a Reward Model\nBrief Abstract: DPO: eliminates the reward model and PPO RL loop by directly optimizing the LLM on preference data via a reparameterized loss.\n\n[Paper 2] Learning to summarize from human feedback\nBrief Abstract: First demonstration that RLHF (PPO + human preference reward model) substantially improves LLM output quality on summarization.\n\n[Paper 3] Training language models to follow instructions with human feedback\nBrief Abstract: InstructGPT: scales RLHF to instruction following with 1.3B-175B parameter GPT-3 models; defines the RLHF recipe for chat LLMs.\n\n[Paper 4] DAPO: An Open-Source LLM Reinforcement Learning System at Scale\nBrief Abstract: DAPO: Decoupled Clip and Dynamic sAmPling policy Optimization — four algorithmic improvements over GRPO that stabilize RL training for LLM reasoning at scale.\n\n[Paper 5] Proximal Policy Optimization Algorithms\nBrief Abstract: PPO: clip-based policy gradient that maintains stable updates within a trust region without second-order optimization.\n\n[Paper 6] Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR\nBrief Abstract: ARRoL: online rollout pruning during RLVR training eliminates low-signal rollouts mid-generation; achieves +2.3-2.99% accuracy gains and 1.7× training speedup over DAPO/GRPO.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1136,
+  "latency_ms": 385324.6967792511,
+  "timestamp": "2026-05-21T09:57:02Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 8,
+    "search_count": 1,
+    "read_count": 6,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W3108347235",
+      "oa:W4383773959",
+      "oa:W4399413575",
+      "oa:W4401806378",
+      "oa:W4380188119",
+      "oa:W4410279031"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

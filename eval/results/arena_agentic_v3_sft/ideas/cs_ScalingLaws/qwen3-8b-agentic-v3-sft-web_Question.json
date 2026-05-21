@@ -1,0 +1,35 @@
+{
+  "trace_id": "cs_ScalingLaws",
+  "task_id": "cs_ScalingLaws",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Task-adaptive T² routing: a learned inference-cost model predicts expected inference compute for each task family, model size, and pruning level, then a budget-aware routing layer selects the model/pruning pair with the best expected T² tradeoff for each task. The core mechanism is a joint optimizer over task family, model scale, and inference compute budget, combining PaLM 2-style scaling evidence, Wanda-style pruning, and edge intelligence-style budget-aware deployment.\",\n  \"niche_genome\": \"Heterogeneous LLM deployments across task families with different inference compute requirements, including math reasoning, coding, language understanding, commonsense, and translation benchmarks. The target is production systems where inference compute is constrained by edge budgets, latency, cost, or deployment environment rather than by a single fixed task set.\",\n  \"observation_genome\": \"PaLM 2 shows that larger models can improve task performance while improving inference efficiency; Wanda shows that pretrained LLMs can be pruned without retraining and retain useful behavior; edge intelligence surveys show that AI deployment should adapt to available compute budget. Task-family benchmarks show that different tasks require very different inference compute budgets, making fixed T² optimization inefficient.\",\n  \"limitation_genome\": \"Fixed T² scaling laws optimize pretraining-inference tradeoffs for one task or one task set, but they do not dynamically adapt to different task families with different inference compute requirements. Pruning reduces compute but does not solve routing: it is unclear which model/pruning level should be deployed for which task and expected budget. Prior work does not jointly model task families, inference cost, and model-pretraining tradeoffs.\",\n  \"delta_genome\": \"Instead of fitting one T² law per task, fit a task-family inference-cost model and add a routing layer that dynamically chooses the optimal model/pruning pair for each task type and expected inference compute budget. This extends T² scaling from fixed-task optimization to budget-aware, task-adaptive routing.\",\n  \"claim_genome\": \"A task-adaptive T² router should improve the expected utility of LLM deployments by selecting the model/pruning pair that optimizes the pretraining-inference tradeoff for each task type and compute budget. The expected result is a measurable improvement in task accuracy under fixed inference compute budgets, lower average inference cost for heterogeneous task sets, and better deployment utility than fixed-model or fixed-pruning baselines.\"\n}\n```",
+  "prompt": "You are a senior researcher in Large Language Models / Scaling Theory.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nT² scaling laws optimize the pretraining-inference tradeoff for a fixed task, but different tasks have radically different inference compute requirements. What mechanism would enable task-adaptive T² scaling — dynamically routing problems to models optimally pretrained for the expected inference compute budget of that task type?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1882,
+  "latency_ms": 440819.74387168884,
+  "timestamp": "2026-05-21T10:53:15Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 4,
+    "read_count": 3,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4377121468",
+      "oa:W4381586827",
+      "oa:W2950865323"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

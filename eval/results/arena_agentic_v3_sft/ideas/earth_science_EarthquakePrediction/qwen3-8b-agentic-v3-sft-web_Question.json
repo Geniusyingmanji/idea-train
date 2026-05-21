@@ -1,0 +1,36 @@
+{
+  "trace_id": "earth_science_EarthquakePrediction",
+  "task_id": "earth_science_EarthquakePrediction",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Build a physics-informed seismic foundation model that fuses lab-scale fault precursors, earthquake catalogs, geodesy, and fault simulations into a continuously updated probabilistic forecasting engine.\",\n  \"niche_genome\": \"Earthquake detection and forecasting for natural faults, especially where sparse seismic networks, hidden fault states, and high false-alarm cost make deterministic prediction implausible.\",\n  \"observation_genome\": \"Recent AI-driven Earth-science work shows that practical AI requires FAIR data, uncertainty quantification, user-centered deployment, and integration with physical models rather than standalone ML prediction. Compound-flood and space-weather research also show that rare high-impact events need multi-driver attribution and calibrated probabilistic forecasts.\",\n  \"limitation_genome\": \"Current ML earthquake prediction often overfits lab-scale precursors, extrapolates to natural faults without fault-state priors, and lacks calibrated probabilistic output that avoids deterministic false alarms.\",\n  \"delta_genome\": \"Replace a standalone ML predictor with a FAIR, physics-constrained, digital-twin-like foundation model: learn from lab precursors and catalogs, regularize with geodesy and simulations, and output calibrated fault-state probabilities, slip forecasts, and uncertainty-aware alerts.\",\n  \"claim_genome\": \"A hybrid physics-informed seismic foundation model can convert meter-scale lab precursors into reliable probabilistic forecasts for natural faults without claiming deterministic prediction, thereby improving operational earthquake early warning and hazard assessment.\"\n}\n```",
+  "prompt": "You are a senior researcher in AI-Driven Seismology / Earthquake Detection and Forecasting.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nMeter-scale laboratory earthquake prediction shows that ML can exploit precursory fault signals, but extrapolation to natural faults remains unresolved because sensors are sparse, fault states are hidden, and false alarms are costly. What physics-informed seismic foundation model would convert lab precursors, earthquake catalogs, geodesy, and simulations into calibrated probabilistic forecasting for natural faults without overclaiming deterministic prediction?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1265,
+  "latency_ms": 348068.75801086426,
+  "timestamp": "2026-05-21T11:35:58Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 7,
+    "search_count": 1,
+    "read_count": 4,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4402145393",
+      "oa:W4407785765",
+      "oa:W4392137547",
+      "oa:W4413480387"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}
