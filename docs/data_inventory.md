@@ -8,11 +8,11 @@ state, sourced from `data/agentic_combined_v3to29/`, `data/dpo_combined/`, and
 
 | Pool | Count | Path |
 |---|---:|---|
-| **SFT demos** | **5833** | `data/agentic_combined_v3to32/sft_demos.jsonl` |
+| **SFT demos** | **5953** | `data/agentic_combined_v3to33/sft_demos.jsonl` |
 | **DPO pairs** | **2593** | `data/dpo_combined/preferences.jsonl` |
 | **RL prompts** | **2930** | `data/rl_prompts_combined/rl_prompts.jsonl` |
 
-**Total: 11036 training items.** 65 unique disciplines. 1247 Chinese demos (23%).
+**Total: 11476 training items.** 73 unique disciplines. 1247 Chinese demos (23%).
 
 ## SFT — 17 source rounds
 
@@ -41,6 +41,7 @@ v3 alone was 11/12/77, so the bias has been deliberately inverted.
 | `agentic_v30` | 120 | Cross-lingual: EN prompt → ZH rationale + ZH gene_genome | Trains cross-lingual research reasoning |
 | `agentic_v31` | 140 | Reverse cross-lingual: ZH prompt → EN rationale + EN gene_genome | Complements v30 for bidirectional transfer |
 | `agentic_v32` | 60 | Long-context dense prompts (4-7 sentences with prior-work context) | Teaches NOT to redundantly search what's already in the prompt |
+| `agentic_v33` | 120 | Soft-sciences: legal, journalism, music_audio, sports_science, architecture, linguistics, art_history, urban_econ | Extends discipline coverage to 73 unique |
 
 ## DPO pairs — 6 rounds, 7 corruption modes
 
