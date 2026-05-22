@@ -1,0 +1,38 @@
+{
+  "trace_id": "physics_FusionPlasmaControl",
+  "task_id": "physics_FusionPlasmaControl",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Plasma Physics / AI-Driven Fusion Control.\nBelow are 8 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nPredict-first TCV and reinforcement-learning plasma-control studies show that data-driven control can learn device-specific dynamics, but ITER-scale deployment needs cross-device transfer, uncertainty-aware safety, and simulator-to-shot adaptation. What fusion-control foundation model would combine differentiable plasma simulators, multi-tokamak logs, and constrained RL to produce robust ramp-up, sustainment, and ramp-down policies across machines?\n\n[Paper 1] Offline Model-Based Reinforcement Learning for Tokamak Control\nBrief Abstract: Offline model-based RL for tokamak control: learns a dynamics model from historical DIII-D experimental data and trains an RL policy entirely offline without requiring a physics simulator; successfully tested for both feedforward trajectory design and feedback control on DIII-D, demonstrating that RL can work with offline data alone.\n\n[Paper 2] Avoiding fusion plasma tearing instability with deep reinforcement learning\nBrief Abstract: Deep RL agent that actively avoids tearing instabilities — the leading cause of plasma disruptions — on DIII-D tokamak; the agent navigates high-pressure plasma through safe operational paths in real time, maintaining H-mode performance while keeping tearing likelihood below a controllable threshold.\n\n[Paper 3] High-fidelity data-driven dynamics model for reinforcement learning-based control in HL-3 tokamak\nBrief Abstract: High-fidelity data-driven dynamics model enables RL-based plasma control on China's HL-3 tokamak; the learned dynamics model serves as a training environment for RL, achieving stable 400-ms, 1-kHz trajectory control with accurate waveform tracking of plasma current and last closed flux surface.\n\n[Paper 4] Learning plasma dynamics and robust rampdown trajectories with predict-first experiments at TCV\nBrief Abstract: Neural state-space model (NSSM) combined with RL for robust plasma rampdown trajectory design at TCV; the NSSM learns plasma dynamics from only 311 pulses (5 in high-performance regime), and RL optimizes trajectories that avoid instability limits; predict-first experiments demonstrate 20% plasma current increase from baseline.\n\n[Paper 5] Magnetic control of tokamak plasmas through deep reinforcement learning\nBrief Abstract: First deep reinforcement learning system deployed for real-time plasma shape control on a tokamak (TCV at EPFL); the RL agent adjusts 19 magnetic coil voltages 10,000 times per second based on 90 diagnostic measurements, producing diverse plasma configurations including advanced shapes and dual droplets.\n\n[Paper 6] TORAX: A Fast and Differentiable Tokamak Transport Simulator in JAX\nBrief Abstract: TORAX: open-source differentiable tokamak transport simulator built in JAX; solves coupled equations for ion/electron heat transport, particle transport, and current diffusion with automatic differentiation, enabling gradient-based optimization of plasma scenarios and seamless integration with ML surrogate models.\n\n[Paper 7] Predicting disruptive instabilities in controlled fusion plasmas through deep learning\nBrief Abstract: First deep learning system for cross-machine disruption prediction in tokamak fusion plasmas; trained on DIII-D and JET experimental data, the model reliably forecasts disruptions even on machines it was not trained on — a crucial capability for ITER and future reactors that cannot afford training disruptions.\n\n[Paper 8] Machine learning for disruption warnings on Alcator C-Mod, DIII-D, and EAST\nBrief Abstract: Random forest-based disruption warning system deployed in real-time on three tokamaks (Alcator C-Mod, DIII-D, EAST); achieves 80-90% disruption detection rates using only real-time-available plasma parameters, with successful inter-shot and real-time operation — the first ML disruption predictor validated across three distinct machines simultaneously.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1014,
+  "latency_ms": 474430.2387237549,
+  "timestamp": "2026-05-21T19:35:18Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 1,
+    "read_count": 6,
+    "extract_count": 1,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4388705686",
+      "oa:W4388705687",
+      "oa:W4388705688",
+      "oa:W4388705689",
+      "oa:W4388705690",
+      "oa:W4388705691"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

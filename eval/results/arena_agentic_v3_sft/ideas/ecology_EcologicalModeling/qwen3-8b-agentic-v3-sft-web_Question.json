@@ -1,0 +1,31 @@
+{
+  "trace_id": "ecology_EcologicalModeling",
+  "task_id": "ecology_EcologicalModeling",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Hybridize a CNN-based remote-sensing predictor with a mechanistic dispersal-demography layer, pairwise trait-mediated interaction networks, and approximate Bayesian calibration. The CNN estimates spatially explicit habitat suitability from Sentinel/ Landsat-like remote sensing, climate, land-use, and vegetation time series; the mechanistic layer converts suitability into population growth, dispersal, immigration, and extinction; the interaction network modulates species responses based on trait similarity, trophic role, and spatial overlap; and ABC or likelihood-calibration layers quantify uncertainty under data scarcity and novelty.\",\n  \"niche_genome\": \"Species-rich ecosystems undergoing rapid climate and land-use change, such as tropical forests, savannas, wetlands, and invaded grasslands, where static presence-absence models overfit current correlations and CNNs fail under future environmental novelty.\",\n  \"observation_genome\": \"Recent deep learning has improved species distribution prediction by learning complex environmental-habitat associations, but it remains static and does not encode dispersal, demography, biotic interactions, or uncertainty. LSM-style models provide process structure but are too coarse for species-level community reassembly; ABC provides a route to calibrate complex ecological models but is computationally heavy for large species communities.\",\n  \"limitation_genome\": \"Static CNNs and presence-only models correlate current distributions with environmental covariates but cannot forecast how species will move, grow, die, compete, or coexist under future climate and land-use scenarios. They also do not calibrate uncertainty when training data are sparse, fragmented, or dominated by recent records.\",\n  \"delta_genome\": \"Replace static CNN prediction with a calibrated hybrid: remote-sensing CNN → mechanistic dispersal-demography → trait-mediated interaction → ABC/likelihood uncertainty module. The key delta is forecasting community reassembly rather than only current species distributions, and adding spatially explicit uncertainty that distinguishes climate novelty, land-use novelty, dispersal barriers, and biotic feedbacks.\",\n  \"claim_genome\": \"A hybrid model should outperform static CNNs and presence-only models in forecast accuracy for community composition, species turnover, and spatial reassembly under climate and land-use novelty, while producing calibrated uncertainty that separates environmental novelty from demographic and interaction effects.\"\n}\n```",
+  "prompt": "You are a senior researcher in Ecology / Deep Learning for Species Distribution and Ecosystem Dynamics Modeling.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nThe 2026 CNN result shows deep learning can outperform classic presence-only species distribution models, but static correlations still fail under climate and land-use novelty, dispersal limits, and biotic interactions. What hybrid ecological model would combine remote sensing, mechanistic dispersal and demography, species interactions, and uncertainty calibration to forecast community reassembly rather than just current distributions?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 968,
+  "latency_ms": 352724.6820926666,
+  "timestamp": "2026-05-21T13:37:45Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 6,
+    "search_count": 5,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

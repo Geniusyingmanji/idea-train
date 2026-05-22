@@ -1,0 +1,31 @@
+{
+  "trace_id": "ecology_EcologicalModeling",
+  "task_id": "ecology_EcologicalModeling",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Ecology / Deep Learning for Species Distribution and Ecosystem Dynamics Modeling.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nThe 2026 CNN result shows deep learning can outperform classic presence-only species distribution models, but static correlations still fail under climate and land-use novelty, dispersal limits, and biotic interactions. What hybrid ecological model would combine remote sensing, mechanistic dispersal and demography, species interactions, and uncertainty calibration to forecast community reassembly rather than just current distributions?\n\n[Paper 1] SatBird: Bird Species Distribution Modeling with Remote Sensing and Citizen Science Data\nBrief Abstract: Established the first benchmark for predicting bird species encounter rates directly from satellite imagery combined with citizen science data, demonstrating that remote sensing captures habitat information predictive of bird community composition at continental scale.\n\n[Paper 2] A scalable model of vegetation transitions using deep neural networks\nBrief Abstract: Demonstrated that deep neural networks can serve as fast surrogate models for computationally expensive process-based ecological simulations, enabling landscape-scale vegetation dynamics modeling at previously intractable spatial extents.\n\n[Paper 3] Convolutional neural networks improve species distribution modelling by capturing the spatial structure of the environment\nBrief Abstract: Proved that CNNs can fundamentally improve species distribution modeling by learning from spatial patches of environmental data rather than point-wise covariates, capturing landscape structure that classical SDMs like Maxent completely miss.\n\n[Paper 4] Multispecies deep learning using citizen science data produces more informative plant community models\nBrief Abstract: Demonstrated that jointly modeling 2,477 plant species with deep neural networks using 6.7 million citizen science observations produces significantly better species distribution and community composition predictions than independent single-species models.\n\n[Paper 5] Maximum entropy modeling of species geographic distributions\nBrief Abstract: Introduced Maxent as a principled machine learning framework for species distribution modeling from presence-only data, establishing the dominant paradigm for ecological niche modeling that would persist for nearly two decades.\n\n[Paper 6] Convolutional neural networks outperform other presence-only species distribution modeling algorithms\nBrief Abstract: Provided definitive large-scale evidence that CNNs consistently outperform Maxent and all other presence-only SDM algorithms across 225 species in multiple taxonomic groups, with data augmentation proving especially critical for rare species with fewer than 30 observations.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1180,
+  "latency_ms": 556446.6009140015,
+  "timestamp": "2026-05-21T13:23:31Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 9,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

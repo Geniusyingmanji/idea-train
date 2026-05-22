@@ -1,0 +1,38 @@
+{
+  "trace_id": "math_MathReasoning",
+  "task_id": "math_MathReasoning",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Mathematical Reasoning / Math LLMs.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nDeepSeek-Prover-V2 narrows the gap between informal reasoning and Lean-verified theorem proving, but its training and search still rely on formalizable statements and verifiable subgoals. What training and evaluation mechanism would extend RL-based mathematical reasoning to open-ended research mathematics, where the system must propose conjectures, choose proof strategies, and estimate progress before a formal verification target or automatic reward exists?\n\n[Paper 1] DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models\nBrief Abstract: Introduces GRPO (Group Relative Policy Optimization) for math reasoning and achieves 51.7% on MATH with a 7B open model, approaching GPT-4 level through careful data curation and RL.\n\n[Paper 2] Solving Quantitative Reasoning Problems with Language Models\nBrief Abstract: Minerva achieves 50.3% on MATH by continued pretraining of PaLM on technical content, demonstrating that domain-specific pretraining on scientific and mathematical text dramatically improves quantitative reasoning.\n\n[Paper 3] Let's Verify Step by Step\nBrief Abstract: Process Reward Models (PRMs) trained with step-level human feedback substantially outperform outcome-level reward models for mathematical reasoning verification, solving 78% of MATH problems.\n\n[Paper 4] DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning\nBrief Abstract: Pure RL (GRPO) without supervised CoT distillation produces emergent long chain-of-thought reasoning with self-verification, achieving 79.8% on AIME 2024 and 97.3% on MATH-500.\n\n[Paper 5] Measuring Mathematical Problem Solving With the MATH Dataset\nBrief Abstract: Introduces the MATH dataset of 12,500 competition math problems with step-by-step solutions, establishing the canonical benchmark for measuring mathematical reasoning in AI.\n\n[Paper 6] DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition\nBrief Abstract: Combines RL-trained subgoal decomposition with formal verification to achieve 88.9% on miniF2F-test and 49/658 on PutnamBench, bridging informal mathematical reasoning with formal proof generation.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1375,
+  "latency_ms": 462247.7488517761,
+  "timestamp": "2026-05-21T16:55:48Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 2,
+    "read_count": 6,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4417525574",
+      "oa:W4406023812",
+      "oa:W4393177788",
+      "oa:W4394868324",
+      "oa:W4416186944",
+      "oa:W4417525574"
+    ],
+    "propose_emitted": false,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "trace_id": "math_AIforCombinatorics",
+  "task_id": "math_AIforCombinatorics",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Build a neuro-symbolic discovery loop called Certify-Generate-Mine: an LLM-guided evolutionary search agent proposes combinatorial constructions, a proof-assistant verifier checks correctness and extracts formal certificates, and an invariant-mining module mines structural properties, conjectures, and counterexamples from the search population. The loop uses the LLM to generate candidate objects, the proof assistant to produce formal certificates, and invariant mining to discover human-readable patterns that explain why constructions succeed or fail.\",\n  \"niche_genome\": \"Combinatorics and discrete mathematics problems where constructions are valuable but proofs are hard: bijections, designs, graphs, matroids, extremal sets, and enumeration problems. The target is not only to find new objects but to deliver them with certificates, conjectures, and readable structure rather than merely empirical examples.\",\n  \"observation_genome\": \"AlphaEvolve-style evolutionary coding agents can discover mathematical constructions at scale, but they often output artifacts without proofs or explanatory theory. Proof-assistant literature shows that formal verification is needed to make mathematical discoveries trustworthy, while mathematical-language-model surveys show that LLMs can generate conjectures and proofs. Hyperstructure-style hierarchical representations suggest that mathematical objects and proofs can be organized into multi-layered, set-valued invariants.\",\n  \"limitation_genome\": \"Current LLM-driven discovery systems often fail to produce proofs, invariant explanations, or reusable conjectures. Proof assistants are powerful but not always efficient for open-ended construction search, and LLMs are weak at maintaining consistent formal state across many candidate objects.\",\n  \"delta_genome\": \"Replace a single LLM or proof-assistant pipeline with a coupled neuro-symbolic loop: LLM proposes, proof assistant certifies, invariant miner explains. The key delta is to make construction search output certificates, conjectures, and human-readable structure rather than only raw constructions.\",\n  \"claim_genome\": \"A Certify-Generate-Mine loop will increase the scientific utility of combinatorial discovery by producing objects with formal certificates and conjectures. It will reduce the bottleneck of empirical artifacts and provide researchers with a reusable framework for generating, verifying, and explaining combinatorial constructions.\"\n}\n```",
+  "prompt": "You are a senior researcher in AI for Combinatorics and Discrete Mathematics.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nAlphaEvolve-style evolutionary coding agents can discover mathematical constructions at scale, but they often provide empirical artifacts rather than proofs or explanatory theory. What neuro-symbolic discovery loop would couple LLM-guided search with proof assistants and invariant mining so new combinatorial objects arrive with certificates, conjectures, and human-readable structure?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1447,
+  "latency_ms": 476064.7852420807,
+  "timestamp": "2026-05-21T16:26:45Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 5,
+    "read_count": 3,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W4405715707",
+      "oa:W4413491436",
+      "oa:W4389821576"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}

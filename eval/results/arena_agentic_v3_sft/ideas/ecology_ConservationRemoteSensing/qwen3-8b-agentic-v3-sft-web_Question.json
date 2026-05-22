@@ -1,0 +1,35 @@
+{
+  "trace_id": "ecology_ConservationRemoteSensing",
+  "task_id": "ecology_ConservationRemoteSensing",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Question",
+  "content": "```json\n{\n  \"mechanism_genome\": \"Develop a sub-hectare near-real-time attribution graph that fuses Prithvi-EO-2.0/SkySense-like foundation-model representations, Sentinel-1/2/6, fire alerts, road networks, agricultural masks, and species/ecosystem-integrity layers. The graph assigns each detected change to a causal category—logging, fire, drought, road expansion, agriculture—and propagates uncertainty through a calibrated impact model that estimates carbon loss, biodiversity sensitivity, and conservation-value change.\",\n  \"niche_genome\": \"Conservation MRV for tropical and biodiverse forests, especially protected-area buffers, carbon-offset landscapes, and regions where deforestation, logging, fire, drought, and infrastructure expansion are difficult to distinguish at fine spatial scales. The target is near-real-time alerts below 1 ha, with globally transferable calibration rather than region-specific models.\",\n  \"observation_genome\": \"Existing Earth-observation systems can detect land-cover change, but they rarely distinguish human pressures and rarely quantify carbon, biodiversity, or conservation impacts. Conservation MRV papers emphasize repeated measurement, reporting, and verification, while biodiversity-integrity papers show that protected-area designations alone do not capture intact forest condition. AI/sustainability papers show that automated monitoring can be powerful but must avoid allocation harms and cascading failures.\",\n  \"limitation_genome\": \"Foundation models and benchmark change detectors are strong at broad Earth-observation transfer, but they lack causal attribution, uncertainty quantification, and direct linkage to biodiversity and carbon impact. Current conservation monitoring systems are often retrospective, coarse, or siloed, while MRV frameworks are often static and do not support rapid alerts.\",\n  \"delta_genome\": \"Replace region-specific fine-tuning with a globally calibrated attribution graph that learns from benchmarked change-detection datasets, soil-carbon MRV, biodiversity-integrity maps, and protected-area context. The graph would produce calibrated alerts with probability of logging, fire, drought, road, or agriculture, plus expected carbon loss, species-sensitivity weight, and conservation-value change.\",\n  \"claim_genome\": \"A globally calibrated sub-hectare attribution framework would convert foundation-model representations into actionable conservation MRV: it would distinguish human pressures, quantify biodiversity and carbon impacts, and provide near-real-time alerts that can support MRV reporting, adaptive conservation, and carbon-offset verification.\"\n}\n```",
+  "prompt": "You are a senior researcher in Ecology / Deep Learning for Forest Monitoring, Deforestation Detection, and Conservation Remote Sensing.\nBased on your expertise, generate a new research idea for the following frontier question.\n\n**Frontier Question**:\nPrithvi-EO-2.0 and SkySense-style geospatial foundation models support broad Earth-observation transfer, but conservation deployment needs sub-hectare, near-real-time alerts that distinguish logging, fire, drought, roads, and agriculture while attaching biodiversity and carbon impact. What change-detection and attribution framework would turn foundation-model representations into globally calibrated conservation MRV?\n\nGenerate a new research idea for the frontier question.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 1947,
+  "latency_ms": 512552.1092414856,
+  "timestamp": "2026-05-21T13:14:14Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 4,
+    "read_count": 3,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [
+      "oa:W2969592549",
+      "oa:W3101183821",
+      "oa:W3199397800"
+    ],
+    "propose_emitted": true,
+    "malformed_count": 1,
+    "temperature": 0.5
+  }
+}

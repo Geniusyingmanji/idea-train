@@ -1,0 +1,31 @@
+{
+  "trace_id": "physics_QuantumErrorCorrection",
+  "task_id": "physics_QuantumErrorCorrection",
+  "participant_id": "qwen3-8b-agentic-v3-sft-web",
+  "participant_type": "llm",
+  "provider": "local_transformers_agentic",
+  "model": "Qwen/Qwen3-8B + /home/azureuser/workspace-gzy/zyf/idea_train/train/checkpoints/qwen3-8b-agentic-v3-sft/final",
+  "framework": "agentic-opd-v2",
+  "harness": null,
+  "setting": "Library",
+  "content": "```json\n{}\n```",
+  "prompt": "You are a senior researcher in Quantum Computing / Superconducting Qubits.\nBelow are 6 important recent papers in this area, presented in random order. Each item contains only the paper title and a brief abstract; no lineage order, structured source-change fields, or evolutionary dynamics labels are provided.\n\n**Frontier Question**:\nFault-tolerant QAOA and HHL are demonstrated but on small problem instances where classical computers still win. What mechanism would enable fault-tolerant quantum algorithms at the scale where quantum advantage is achieved for practically relevant problem sizes — requiring both below-threshold logical gates and efficient magic state factories at scale?\n\n[Paper 1] Suppressing quantum errors by scaling a surface code logical qubit\nBrief Abstract: 2D surface code on 72-qubit Sycamore chip: distance-5 outperforms distance-3 logical qubit; below-threshold operation for one QEC cycle type.\n\n[Paper 2] Superconducting quantum circuits at the surface code threshold for fault tolerance\nBrief Abstract: Demonstrates two-qubit gate fidelity of 99.4% in superconducting qubits, meeting the surface code threshold for the first time experimentally.\n\n[Paper 3] Exponential suppression of bit or phase errors with cyclic error correction\nBrief Abstract: 1D repetition code on 21 qubits shows exponential error suppression with code distance; first demonstration of logical error rate decreasing with qubit number.\n\n[Paper 4] Quantum error correction below the surface code threshold\nBrief Abstract: Willow chip: 105-qubit superconducting processor demonstrates below-threshold surface code error correction with exponential suppression across d=3,5,7; logical error rates 2× per distance level.\n\n[Paper 5] Surface codes: Towards practical large-scale quantum computation\nBrief Abstract: Comprehensive surface code blueprint: threshold analysis, resource overhead estimation, and full fault-tolerant gate set for planar qubit array topology.\n\n[Paper 6] Fault-Tolerant Execution of Error-Corrected Quantum Algorithms\nBrief Abstract: First demonstration of end-to-end fault-tolerant execution of actual quantum algorithms (QAOA and HHL) on logical qubits; 12 logical qubits on 97 physical qubits using [[7,1,3]] Steane code on Quantinuum H2 and Helios trapped-ion processors; near-break-even performance on complex error-corrected algorithmic circuits.\n\nBased on the frontier question and the papers above, generate a new research idea.\n\nReturn ONLY valid JSON. Do not wrap it in Markdown fences.\n{\n  \"idea\": \"<short name of the proposed idea, 5-15 words>\",\n  \"idea_description\": \"<150-250 words describing the full research idea>\",\n  \"technical_plan\": {\n    \"target_problem\": \"<specific problem, dataset, population, or phenomenon>\",\n    \"core_method\": \"<technical method or mechanism, not a vague goal>\",\n    \"limitation_addressed\": \"<frontier limitation repaired by this idea>\",\n    \"expected_result\": \"<scientific result or claim if successful>\"\n  },\n  \"lineage_connection\": {\n    \"source_ideas\": [\"<paper title or source idea used by this proposal>\", \"...\"],\n    \"reused_parts\": [\"<specific method, evidence, data, or problem framing reused from the sources>\", \"...\"],\n    \"changed_parts\": [\"<specific modified, replaced, combined, or newly added part>\", \"...\"],\n    \"why_next_step\": \"<why this idea follows from the provided context>\",\n    \"lineage_risk\": \"<most likely way this source connection could be wrong>\"\n  },\n  \"evaluation_plan\": {\n    \"setup\": \"<concrete experiment, benchmark, proof, or analysis setup>\",\n    \"baselines\": [\"<baseline>\", \"...\"],\n    \"metrics\": [\"<metric>\", \"...\"],\n    \"risks\": [\"<risk>\", \"...\"]\n  }\n}\n",
+  "output_schema": "OUTPUT_JSON_SCHEMA",
+  "input_tokens": 0,
+  "output_tokens": 815,
+  "latency_ms": 454338.25421333313,
+  "timestamp": "2026-05-21T20:21:07Z",
+  "metadata": {
+    "agentic_mode": true,
+    "n_actions": 9,
+    "search_count": 9,
+    "read_count": 0,
+    "extract_count": 0,
+    "diff_count": 0,
+    "novelty_count": 0,
+    "read_paper_ids": [],
+    "propose_emitted": false,
+    "malformed_count": 0,
+    "temperature": 0.5
+  }
+}
