@@ -8,7 +8,7 @@ state, sourced from `data/agentic_combined_v3to29/`, `data/dpo_combined/`, and
 
 | Pool | Count | Path |
 |---|---:|---|
-| **SFT demos** | **5633** | `data/agentic_combined_v3to30/sft_demos.jsonl` |
+| **SFT demos** | **5773** | `data/agentic_combined_v3to31/sft_demos.jsonl` |
 | **DPO pairs** | **2593** | `data/dpo_combined/preferences.jsonl` |
 | **RL prompts** | **2930** | `data/rl_prompts_combined/rl_prompts.jsonl` |
 
@@ -39,6 +39,7 @@ v3 alone was 11/12/77, so the bias has been deliberately inverted.
 | `agentic_v26` | 79 | 10 fresh disciplines (quantum_info, synth_bio, climate, HCI, …) | SFT for v25's RL-only disciplines |
 | `agentic_v29` | 219 | ZH for 10 fresh disciplines | Bilingual coverage for the new disciplines |
 | `agentic_v30` | 120 | Cross-lingual: EN prompt → ZH rationale + ZH gene_genome | Trains cross-lingual research reasoning |
+| `agentic_v31` | 140 | Reverse cross-lingual: ZH prompt → EN rationale + EN gene_genome | Complements v30 for bidirectional transfer |
 
 ## DPO pairs — 6 rounds, 7 corruption modes
 
