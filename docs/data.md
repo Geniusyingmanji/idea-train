@@ -8,7 +8,7 @@ Single source of truth for: corpus state, schema spec, design rationale.
 |---|---:|---|
 | **SFT demos** | **6332** | `data/agentic_combined_v3to38/sft_demos.jsonl` |
 | **DPO pairs** | **2891** | `data/dpo_combined/preferences.jsonl` (11 rejection modes) |
-| **RL prompts** | **2930** | `data/rl_prompts_combined/rl_prompts.jsonl` |
+| **RL prompts** | **3050** | `data/rl_prompts_combined/rl_prompts.jsonl` |
 
 **Total: 11476 training items.** 73 unique disciplines. 1247 Chinese demos (21%). Median 3 tools/demo. 64% short trajectories (1-3 tools) — was 11% in v3 alone.
 
@@ -70,6 +70,7 @@ Combined yield: **2891 pairs**. `v13 corruption-style` had 95% pair yield vs tou
 | `agentic_v20/rl_prompts.jsonl` | 800 | 20 disc × style combos (peer-review/CFP/academic/learner/industry/policy) |
 | `agentic_v25/rl_prompts.jsonl` | 540 | 10 fresh disciplines × 3 styles |
 | `agentic_v28/rl_prompts.jsonl` | 400 | ZH for the 10 fresh disciplines |
+| `agentic_v39/rl_prompts.jsonl` | 120 | Long-context (4-6 sentence prompts with prior-work citations) |
 
 ## 5. Schema spec
 
