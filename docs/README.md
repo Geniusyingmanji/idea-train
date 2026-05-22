@@ -8,7 +8,8 @@ deeper.
 
 | File | What it covers |
 |---|---|
-| [`data_inventory.md`](data_inventory.md) | **What's in each data round (v3 → v29).** SFT/DPO/RL counts, per-round purpose, tool-coverage stats. Generated after the 14h autonomous expansion. |
+| [`data_inventory.md`](data_inventory.md) | **What's in each data round (v3 → v33).** SFT/DPO/RL counts, per-round purpose, tool-coverage stats. |
+| [`recent_experiments_2026_05.md`](recent_experiments_2026_05.md) | **Recent eval results + methodological lessons** (agentic propose-rate finding, DPO yield comparison, what worked / what broke). |
 | [`research_workflows.md`](research_workflows.md) | **Current authoritative design.** First-principle definition of "research," 10 workflow archetypes (W1-W10), 8 core research skills, data-generation principles, and training implications. This is the doc behind the v3 (1032-demo) dataset. |
 | [`STATUS.md`](STATUS.md) | Latest status snapshot — what's done, what's blocked, what's next |
 | [`paper_positioning.md`](paper_positioning.md) | How this work is framed against IdeaEvolving, ArenaRL, SGI-Bench, etc. |
