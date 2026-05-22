@@ -19,6 +19,7 @@ SOURCES = [
     (ROOT / "agentic_v22" / "preferences.jsonl", "v22"),
     (ROOT / "agentic_v27" / "preferences.jsonl", "v27"),
     (ROOT / "agentic_v37" / "preferences.jsonl", "v37"),
+    (ROOT / "agentic_v40" / "preferences.jsonl", "v40"),
 ]
 
 
