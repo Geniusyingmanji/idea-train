@@ -7,7 +7,7 @@ Single source of truth for: corpus state, schema spec, design rationale.
 | Pool | Count | Path |
 |---|---:|---|
 | **SFT demos** | **6227** | `data/agentic_combined_v3to36/sft_demos.jsonl` |
-| **DPO pairs** | **2593** | `data/dpo_combined/preferences.jsonl` |
+| **DPO pairs** | **2891** | `data/dpo_combined/preferences.jsonl` (11 rejection modes) |
 | **RL prompts** | **2930** | `data/rl_prompts_combined/rl_prompts.jsonl` |
 
 **Total: 11476 training items.** 73 unique disciplines. 1247 Chinese demos (21%). Median 3 tools/demo. 64% short trajectories (1-3 tools) — was 11% in v3 alone.
@@ -45,7 +45,9 @@ Length-tier: **64% short / 14% med / 22% long**. (Inverted from v3's 11/12/77.)
 
 ## 3. DPO — 6 rounds, 7 corruption modes
 
-Combined yield: **2593 pairs**. `v13 corruption-style` had 95% pair yield vs tournament-style's 34-41% (see `experiment.md` §3).
+Combined yield: **2891 pairs**. `v13 corruption-style` had 95% pair yield vs tournament-style's 34-41% (see `experiment.md` §3).
+
+7 rounds total. v37 adds 4 new corruption modes complementing the original 7. **Mode distribution:** wrong_schema 552, premature_propose 532, no_evidence 481, schema_collapse 383, truncated 370, verbose_padding 272, mode_collapse 75, fake_citation 75, contradictory_fields 74, shallow_search 74, made_up_papers 3.
 
 | Round | n | Approach |
 |---|---:|---|
@@ -55,6 +57,7 @@ Combined yield: **2593 pairs**. `v13 corruption-style` had 95% pair yield vs tou
 | `agentic_v19` | 571 | v13 with fresh seed (2033) |
 | `agentic_v22` | 575 | v13 with fresh seed (2037) |
 | `agentic_v27` | 297 | v13 with seed 2039, focused 3-mode |
+| `agentic_v37` | 298 | **4 new corruption modes**: shallow_search, contradictory_fields, fake_citation, mode_collapse |
 
 **Rejection-mode distribution:** wrong_schema 552, premature_propose 532, no_evidence 481, schema_collapse 383, truncated 370, verbose_padding 272, made_up_papers 3.
 

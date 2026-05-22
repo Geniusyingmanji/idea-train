@@ -23,7 +23,7 @@ Use `tools/agentic_eval_gene_arena.py` as in §6 of `experiment.md`. Key metrics
 - **Median tools/demo at inference**
 
 ### 3. DPO from `dpo_combined`
-After re-SFT lands, run DPO on the 2593 pairs in `data/dpo_combined/preferences.jsonl`. The 7 corruption modes are well-distributed; no further balancing needed.
+After re-SFT lands, run DPO on the 2891 pairs in `data/dpo_combined/preferences.jsonl`. The 7 corruption modes are well-distributed; no further balancing needed.
 
 ### 4. SGI-Bench task_2 eval
 The new corpus has v8 sgi_idea_plan_strict (81 demos) + v6/v15 idea_plan demos. Re-run SGI eval — previous attempts hit 0/100 propose because the v3-only model didn't know `idea_plan` schema.
