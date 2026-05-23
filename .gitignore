@@ -22,3 +22,4 @@ __pycache__/
 # old draft files
 *.bak
 *.orig
+**/preferences.raw_calls.jsonl
