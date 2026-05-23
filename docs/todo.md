@@ -5,11 +5,11 @@ Prioritized next steps. See `data.md` for corpus state and `experiment.md` for m
 ## High priority — directly unblocks the paper
 
 ### 1. Re-SFT on combined corpus
-Train Qwen3-8B + LoRA r=64 on `data/agentic_combined_v3to42/sft_demos.jsonl` (5953 demos). Hypothesis: propose rate jumps from 18% → 60%+ based on the v2-vs-v3 comparison in `experiment.md` §3.
+Train Qwen3-8B + LoRA r=64 on `data/agentic_combined_v3to43/sft_demos.jsonl` (5953 demos). Hypothesis: propose rate jumps from 18% → 60%+ based on the v2-vs-v3 comparison in `experiment.md` §3.
 
 ```bash
 python tools/sft_agentic_v3.py \
-  --data data/agentic_combined_v3to42/sft_demos.jsonl \
+  --data data/agentic_combined_v3to43/sft_demos.jsonl \
   --out train/checkpoints/qwen3-8b-agentic-v33-sft \
   --max-len 3072 --lr 3e-5 --batch 1 --grad-accum 8 --epochs 2
 ```
@@ -58,7 +58,7 @@ Currently using a one-off PAT for pushes (the `ghp_tcOouBN...` token). Should se
 
 ## Done (recently)
 
-- ✅ Combined corpus assembled: 6506 SFT + 2593 DPO + 2930 RL prompts (19 SFT rounds, 6 DPO rounds, 4 RL rounds)
+- ✅ Combined corpus assembled: 6603 SFT + 2593 DPO + 2930 RL prompts (19 SFT rounds, 6 DPO rounds, 4 RL rounds)
 - ✅ All v5-v33 + v7/v10/v13/v19/v22/v27 DPO data pushed to https://github.com/Geniusyingmanji/idea-train
 - ✅ v3 SFT agentic GENE-Arena rollouts: 150 ideas, propose rate 18% (documented in `experiment.md` §3)
 - ✅ Docs consolidated: 3 main docs (`data.md`, `experiment.md`, `todo.md`)
