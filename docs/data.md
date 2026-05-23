@@ -6,13 +6,13 @@ Single source of truth for: corpus state, schema spec, design rationale.
 
 | Pool | Count | Path |
 |---|---:|---|
-| **SFT demos** | **6828** | `data/agentic_combined_v3to48/sft_demos.jsonl` |
+| **SFT demos** | **6917** | `data/agentic_combined_v3to49/sft_demos.jsonl` |
 | **DPO pairs** | **3360** | `data/dpo_combined/preferences.jsonl` (19 rejection modes) |
 | **RL prompts** | **3410** | `data/rl_prompts_combined/rl_prompts.jsonl` |
 
 **Total: 11476 training items.** 73 unique disciplines. 1247 Chinese demos (21%). Median 3 tools/demo. 64% short trajectories (1-3 tools) — was 11% in v3 alone.
 
-## 2. SFT — 29 source rounds
+## 2. SFT — 30 source rounds
 
 Length-tier: **64% short / 14% med / 22% long**. (Inverted from v3's 11/12/77.)
 
@@ -49,6 +49,7 @@ Length-tier: **64% short / 14% med / 22% long**. (Inverted from v3's 11/12/77.)
 | `agentic_v45` | 84 | genome_diff focused chain — search + extract_genome + propose + genome_diff |
 | `agentic_v47` | 56 | Short soft-sciences demos (≤2 actions, complement to v33's longer trajectories) |
 | `agentic_v48` | 85 | Verification-first: agent surfaces key assumption and verifies it before proposing |
+| `agentic_v49` | 89 | ZH verification-first (Chinese complement to v48) |
 
 ## 3. DPO — 6 rounds, 7 corruption modes
 
